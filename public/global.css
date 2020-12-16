@@ -7,6 +7,7 @@ body {
 
 body {
   color: #333;
+  background: linear-gradient(rgb(1, 1, 48), rgb(1, 1, 32));
   margin: 0;
   padding: 8px;
   box-sizing: border-box;
@@ -19,10 +20,6 @@ a {
 }
 a:hover {
   text-decoration: none;
-}
-
-a:visited {
-  color: rgb(0, 80, 160);
 }
 
 label {

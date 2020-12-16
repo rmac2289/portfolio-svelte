@@ -1,42 +1,23 @@
 <script>
+	import router from "page";
+	import Home from "./Home.svelte";
+	import About from "./About.svelte";
+	import Experience from "./Experience.svelte";
+	import Contact from "./Contact.svelte";
+	import Projects from "./Projects.svelte";
+	let page;
+	router("/", () => (page = Home));
+	router("/about", () => (page = About));
+	router("/experience", () => (page = Experience));
+	router("/contact", () => (page = Contact));
+	router("/projects", () => (page = Projects));
+	router.start();
 	import Layout from "./Layout.svelte";
-	import { open } from "./store.js";
-	import { fade } from "svelte/transition";
 </script>
 
 <style>
-	h2 {
-		white-space: nowrap;
-		overflow: hidden;
-		animation: keyframes 5s steps(500, end);
-		width: 100%;
-		font-size: 1.5em;
-		font-weight: 100;
-	}
-
-	@keyframes keyframes {
-		from {
-			opacity: 0.5;
-			width: 0px;
-		}
-	}
-	div {
-		white-space: nowrap;
-		overflow: hidden;
-		width: 90%;
-		padding: 1rem;
-	}
-	h1 {
-		font-size: 3em;
-		font-weight: 100;
-	}
 </style>
 
 <Layout>
-	<div>
-		{#if !$open}
-			<h1 out:fade>Ross <br /> MacDonald</h1>
-			<h2 out:fade>Full Stack <br /> Web Developer</h2>
-		{/if}
-	</div>
+	<svelte:component this={page} />
 </Layout>
