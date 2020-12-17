@@ -1,18 +1,21 @@
 <script>
 	import router from "page";
-	import Home from "./Home.svelte";
-	import About from "./About.svelte";
-	import Experience from "./Experience.svelte";
-	import Contact from "./Contact.svelte";
-	import Projects from "./Projects.svelte";
+	import Home from "./components/Home.svelte";
+	import About from "./components/About.svelte";
+	import Experience from "./components/Experience.svelte";
+	import Contact from "./components/Contact.svelte";
+	import Projects from "./components/Projects.svelte";
+	import Resume from "./components/Resume.svelte";
 	let page;
 	router("/", () => (page = Home));
 	router("/about", () => (page = About));
 	router("/experience", () => (page = Experience));
 	router("/contact", () => (page = Contact));
 	router("/projects", () => (page = Projects));
+	router("/resume", () => (page = Resume));
+
 	router.start();
-	import Layout from "./Layout.svelte";
+	import Layout from "./components/Layout.svelte";
 </script>
 
 <style>
