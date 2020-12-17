@@ -1,6 +1,12 @@
 <script>
-    import { open } from "../store.js";
+    import { drag } from "../drag.js";
     import { fade } from "svelte/transition";
+    let isVisible = true;
+    function handleDragStop(e) {
+        if (e.detail.x > 300) {
+            isVisible = false;
+        }
+    }
 </script>
 
 <style>
@@ -30,9 +36,21 @@
         align-items: center;
         justify-content: center;
     }
+    .box {
+        background: white;
+        height: 100px;
+        width: 100px;
+    }
 </style>
 
 <div>
     <h1 out:fade>Ross MacDonald</h1>
     <h2 out:fade>Full Stack Web Developer</h2>
+    <!-- {#if isVisible}
+        <div
+            transition:fade
+            use:drag
+            on:dragStop={handleDragStop}
+            class="box" />
+    {/if} -->
 </div>
