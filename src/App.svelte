@@ -22,9 +22,18 @@
 		display: flex;
 		justify-content: space-between;
 	}
+	.page-box {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
 </style>
 
 <div>
-	<svelte:component this={page} />
+	<div class="page-box">
+		<svelte:component this={page} />
+	</div>
 	<Nav />
 </div>

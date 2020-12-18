@@ -12,16 +12,18 @@
         margin: auto;
         padding: 30px;
         text-align: center;
+        font-family: "Lato", sans-serif;
     }
     a:hover {
-        color: rgb(1, 1, 48);
+        color: rgba(6, 15, 6);
     }
 
     .nav {
         margin: 10px;
     }
     .link-div {
-        background: black;
+        background: rgba(0, 0, 0, 0.3);
+        background-blend-mode: saturation;
         border: 2px solid white;
         display: flex;
         justify-content: center;
@@ -31,7 +33,9 @@
     }
     .link-div:hover {
         transform: translateX(-25px);
-        background: white;
+        background: rgb(255, 255, 255, 0.6);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+            0 10px 10px -5px rgba(0, 0, 0, 0.04);
     }
 
     @media only screen and (min-width: 520px) {

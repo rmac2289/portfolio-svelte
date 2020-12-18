@@ -10,31 +10,44 @@
 </script>
 
 <style>
-    div {
-        width: 100%;
+    .container {
+        width: 600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1rem;
+        align-items: flex-start;
+        border-left: 1px solid rgb(255, 255, 255, 0.5);
     }
     h2 {
-        font-size: 1.25em;
-        font-weight: 100;
+        font-size: 2em;
         color: white;
+        font-weight: 100;
+    }
+
+    .sub-header {
+        display: flex;
+        align-items: center;
         height: 50px;
         padding: 22px;
-        border-top: 1px solid white;
-        margin-top: 0;
-        text-align: center;
+        margin: 0;
+        padding-top: 10px;
+        padding-left: 1px;
     }
     h1 {
         margin-bottom: 0;
-        margin-top: 10px;
         height: 50px;
+        margin-top: 10px;
         padding: 22px;
-        border-bottom: 1px solid white;
-        font-size: 2.5em;
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 4em;
         font-weight: 100;
-        color: white;
         display: flex;
         align-items: center;
         justify-content: center;
+        color: white;
+        border-bottom: 1px solid rgb(255, 255, 255, 0.5);
     }
     .box {
         background: white;
@@ -43,9 +56,11 @@
     }
 </style>
 
-<div>
+<div class="container">
     <h1 out:fade>Ross MacDonald</h1>
-    <h2 out:fade>Full Stack Web Developer</h2>
+    <div class="sub-header">
+        <h2 out:fade>Full Stack Web Developer</h2>
+    </div>
     <!-- {#if isVisible}
         <div
             transition:fade
