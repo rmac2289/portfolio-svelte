@@ -3,11 +3,17 @@
 </script>
 
 <style>
+    nav {
+        display: flex;
+        align-items: center;
+        height: 100vh;
+        margin-right: 20px;
+    }
     a {
         transition: 0.25s all linear;
         color: white;
         font-size: 1.5em;
-        width: 100px;
+        width: 100%;
         height: 30px;
         margin: auto;
         padding: 30px;
@@ -17,13 +23,8 @@
     a:hover {
         color: rgba(6, 15, 6);
     }
-
-    .nav {
-        margin: 10px;
-    }
     .link-div {
         background: rgba(0, 0, 0, 0.3);
-        background-blend-mode: saturation;
         border: 2px solid white;
         display: flex;
         justify-content: center;
