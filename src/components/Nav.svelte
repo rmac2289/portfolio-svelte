@@ -4,6 +4,7 @@
     function setOpen() {
         open = !open;
     }
+    import { links } from "svelte-routing";
 </script>
 
 <style>
@@ -41,10 +42,7 @@
         cursor: pointer;
     }
     .link-div:hover {
-        transform: scale(1.1);
         background: rgb(255, 255, 255, 0.8);
-        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-            0 10px 10px -5px rgba(0, 0, 0, 0.04);
     }
     .open-button {
         position: fixed;
@@ -88,7 +86,7 @@
     }
 </style>
 
-<nav>
+<nav use:links>
     <div
         in:fade={{ delay: 600 }}
         class={open ? 'hidden' : 'open-button'}
@@ -101,27 +99,28 @@
     {#if open}
         <div class="nav">
             <div
-                onclick="location.href='/'"
+                on:click={setOpen}
                 class="link-div one"
                 in:fly={{ duration: 1000, y: 100 }}
                 out:fly={{ duration: 1000, delay: 600, y: 700 }}>
-                <a href="/">home</a>
+                <a state={{ didItWork: 'Yes?' }} href="/">home</a>
             </div>
             <div
-                onclick="location.href='/about'"
+                on:click={setOpen}
                 class="link-div two"
                 in:fly={{ duration: 1000, delay: 100, y: 100 }}
                 out:fly={{ duration: 1000, delay: 500, y: 600 }}>
                 <a href="/about">about</a>
             </div>
             <div
-                onclick="location.href='/experience'"
+                on:click={setOpen}
                 class="link-div three"
                 in:fly={{ duration: 1000, delay: 200, y: 100 }}
                 out:fly={{ duration: 1000, delay: 400, y: 500 }}>
                 <a href="/experience">experience</a>
             </div>
             <div
+                on:click={setOpen}
                 onclick="location.href='https://ross-scott-macdonald.com/blog'"
                 class="link-div four"
                 in:fly={{ duration: 1000, delay: 300, y: 100 }}
@@ -135,21 +134,21 @@
                 </a>
             </div>
             <div
-                onclick="location.href='/resume'"
+                on:click={setOpen}
                 class="link-div five"
                 in:fly={{ duration: 1000, delay: 400, y: 100 }}
                 out:fly={{ duration: 1000, delay: 200, y: 300 }}>
                 <a href="/resume"> resume </a>
             </div>
             <div
-                onclick="location.href='/contact'"
+                on:click={setOpen}
                 class="link-div six"
                 in:fly={{ duration: 1000, delay: 500, y: 100 }}
                 out:fly={{ duration: 1000, delay: 100, y: 200 }}>
                 <a className="contact" href="/contact"> contact </a>
             </div>
             <div
-                onclick="location.href='/projects'"
+                on:click={setOpen}
                 class="link-div seven"
                 in:fly={{ duration: 1000, delay: 600, y: 100 }}
                 out:fly={{ duration: 1000, y: 100 }}>

@@ -6,26 +6,40 @@
 	import Projects from "./components/Projects.svelte";
 	import Resume from "./components/Resume.svelte";
 	import Nav from "./components/Nav.svelte";
+	import { Router, Route } from "svelte-routing";
+	export let url = "";
 </script>
 
 <style>
 	div {
 		display: flex;
-		justify-content: space-between;
-	}
-	.page-box {
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
 		justify-content: center;
-		height: 100vh;
+		align-items: center;
 	}
 </style>
 
-<div>
-	<div class="page-box">
-		<Home />
-		<Nav />
+<Router {url}>
+	<div>
+		<div class="page-box">
+			<Nav />
+			<Route path="/">
+				<Home />
+			</Route>
+			<Route path="/about">
+				<About />
+			</Route>
+			<Route path="/experience">
+				<Experience />
+			</Route>
+			<Route path="/projects">
+				<Projects />
+			</Route>
+			<Route path="/resume">
+				<Resume />
+			</Route>
+			<Route path="/contact">
+				<Contact />
+			</Route>
+		</div>
 	</div>
-</div>
+</Router>

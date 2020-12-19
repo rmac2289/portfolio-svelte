@@ -51,6 +51,14 @@
         height: 100px;
         width: 100px;
     }
+    .page-box {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
     @media only screen and (min-width: 520px) {
         .sub-header {
             padding-top: 10px;
@@ -58,16 +66,18 @@
     }
 </style>
 
-<div class="container">
-    <h1 transition:fade>Ross MacDonald</h1>
-    <div class="sub-header">
-        <h2 transition:fade>Full Stack Web Developer</h2>
-    </div>
-    <!-- {#if isVisible}
+<div class="page-box">
+    <div class="container">
+        <h1 transition:fade>Ross MacDonald</h1>
+        <div class="sub-header">
+            <h2 transition:fade>Full Stack Web Developer</h2>
+        </div>
+        <!-- {#if isVisible}
         <div
             transition:fade
             use:drag
             on:dragStop={handleDragStop}
             class="box" />
     {/if} -->
+    </div>
 </div>
