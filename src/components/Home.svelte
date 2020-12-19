@@ -11,7 +11,7 @@
 
 <style>
     .container {
-        width: 600px;
+        max-width: 600px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -31,16 +31,13 @@
         height: 50px;
         padding: 22px;
         margin: 0;
-        padding-top: 10px;
         padding-left: 1px;
     }
     h1 {
         margin-bottom: 0;
-        height: 50px;
-        margin-top: 10px;
-        padding: 22px;
-        padding-left: 0;
-        padding-right: 0;
+        min-height: 50px;
+        margin: 0;
+        padding: 20px 0 0 0;
         font-size: 4em;
         font-weight: 100;
         display: flex;
@@ -54,12 +51,17 @@
         height: 100px;
         width: 100px;
     }
+    @media only screen and (min-width: 520px) {
+        .sub-header {
+            padding-top: 10px;
+        }
+    }
 </style>
 
 <div class="container">
-    <h1 out:fade>Ross MacDonald</h1>
+    <h1 transition:fade>Ross MacDonald</h1>
     <div class="sub-header">
-        <h2 out:fade>Full Stack Web Developer</h2>
+        <h2 transition:fade>Full Stack Web Developer</h2>
     </div>
     <!-- {#if isVisible}
         <div
