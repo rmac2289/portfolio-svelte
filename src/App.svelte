@@ -20,26 +20,24 @@
 
 <Router {url}>
 	<div>
-		<div class="page-box">
-			<Nav />
-			<Route path="/">
-				<Home />
-			</Route>
-			<Route path="/about">
-				<About />
-			</Route>
-			<Route path="/experience">
-				<Experience />
-			</Route>
-			<Route path="/projects">
-				<Projects />
-			</Route>
-			<Route path="/resume">
-				<Resume />
-			</Route>
-			<Route path="/contact">
-				<Contact />
-			</Route>
-		</div>
+		<Nav />
+		<Route path="/">
+			<Home />
+		</Route>
+		<Route path="/about">
+			<About />
+		</Route>
+		<Route path="/experience">
+			<Experience />
+		</Route>
+		<Route path="/projects">
+			<Projects />
+		</Route>
+		<Route path="/resume">
+			<Resume />
+		</Route>
+		<Route path="/contact">
+			<Contact />
+		</Route>
 	</div>
 </Router>

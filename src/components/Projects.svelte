@@ -1,6 +1,13 @@
 <script>
+    import Layout from "./Layout.svelte";
 </script>
 
-<div>
-    <h1>Projects</h1>
-</div>
+<style>
+    .header {
+        color: white;
+    }
+</style>
+
+<Layout>
+    <h1 class="header">Projects</h1>
+</Layout>

@@ -1,12 +1,5 @@
 <script>
-    import { drag } from "../drag.js";
     import { fade } from "svelte/transition";
-    let isVisible = true;
-    function handleDragStop(e) {
-        if (e.detail.x > 300) {
-            isVisible = false;
-        }
-    }
 </script>
 
 <style>
@@ -46,11 +39,6 @@
         color: white;
         border-bottom: 1px solid rgb(255, 255, 255, 0.5);
     }
-    .box {
-        background: white;
-        height: 100px;
-        width: 100px;
-    }
     .page-box {
         width: 100%;
         display: flex;
@@ -68,16 +56,9 @@
 
 <div class="page-box">
     <div class="container">
-        <h1 transition:fade>Ross MacDonald</h1>
+        <h1>Ross MacDonald</h1>
         <div class="sub-header">
-            <h2 transition:fade>Full Stack Web Developer</h2>
+            <h2>Full Stack Web Developer</h2>
         </div>
-        <!-- {#if isVisible}
-        <div
-            transition:fade
-            use:drag
-            on:dragStop={handleDragStop}
-            class="box" />
-    {/if} -->
     </div>
 </div>

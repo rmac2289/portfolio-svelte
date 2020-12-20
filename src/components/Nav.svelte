@@ -12,7 +12,7 @@
         display: grid;
         grid-template-columns: 1fr;
         height: 100vh;
-        position: absolute;
+        position: fixed;
         top: 0;
         right: 0;
         left: 0;
@@ -27,7 +27,6 @@
         margin: auto;
         padding: 30px;
         text-align: center;
-        font-family: "Lato", sans-serif;
     }
     a:hover {
         color: rgba(6, 15, 6);
@@ -54,15 +53,15 @@
         justify-content: center;
         align-items: center;
         cursor: pointer;
+        padding-left: 5px;
     }
     .open-button-text {
         color: white;
-        font-family: "Lato", sans-serif;
         font-size: 2.5rem;
         transform: rotate(90deg);
     }
     .close-button {
-        position: absolute;
+        position: fixed;
         top: 5px;
         right: 7px;
         height: 50px;
@@ -74,28 +73,34 @@
         align-items: center;
         cursor: pointer;
     }
+    .close-button:active {
+        transform: scale(0.9);
+    }
     .close-button-text {
         color: rgba(6, 15, 6);
-        font-family: "Lato", sans-serif;
         font-size: 28px;
-    }
-    .hidden {
-        display: none;
-    }
-    @media only screen and (min-width: 520px) {
     }
 </style>
 
 <nav use:links>
-    <div
-        in:fade={{ delay: 600 }}
-        class={open ? 'hidden' : 'open-button'}
-        on:mouseenter={setOpen}>
-        <p class="open-button-text">|||</p>
-    </div>
-    <div class={!open ? 'hidden' : 'close-button'} on:click={setOpen}>
-        <p class="close-button-text">X</p>
-    </div>
+    {#if !open}
+        <div
+            aria-label="Open Navigation"
+            in:fade={{ delay: 500 }}
+            class={'open-button'}
+            on:mouseenter={setOpen}>
+            <p class="open-button-text">|||</p>
+        </div>
+    {:else}
+        <div
+            aria-label="Close Navigation"
+            in:fly={{ delay: 700, y: -50 }}
+            out:fly={{ y: -50 }}
+            class={'close-button'}
+            on:click={setOpen}>
+            <p class="close-button-text">X</p>
+        </div>
+    {/if}
     {#if open}
         <div class="nav">
             <div
