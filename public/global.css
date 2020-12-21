@@ -43,7 +43,8 @@ a:hover {
 }
 .header,
 h2,
-h1 {
+h1,
+span {
   font-family: "Lustria", serif;
 }
 label {

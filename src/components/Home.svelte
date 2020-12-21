@@ -1,5 +1,6 @@
 <script>
     import { fade } from "svelte/transition";
+    import { store } from "../store";
 </script>
 
 <style>
@@ -16,11 +17,11 @@
         font-size: 2em;
         color: white;
         font-weight: 100;
+        overflow: hidden;
+        white-space: nowrap;
+        margin: 0 auto;
     }
-
     .sub-header {
-        display: flex;
-        align-items: center;
         height: 50px;
         padding: 22px;
         margin: 0;
@@ -58,7 +59,12 @@
     <div class="container">
         <h1>Ross MacDonald</h1>
         <div class="sub-header">
-            <h2>Full Stack Web Developer</h2>
+            <h2>
+                {#each $store.subtitle as letter, i}
+                    <span
+                        in:fade={{ delay: i * 100, duration: 1000 }}>{letter}</span>
+                {/each}
+            </h2>
         </div>
     </div>
 </div>
