@@ -1,3 +1,8 @@
+<script>
+    let y;
+    import { fade } from "svelte/transition";
+</script>
+
 <style>
     .container {
         display: none;
@@ -52,10 +57,13 @@
     }
 </style>
 
-<div class="container">
-    <h1 class="corner-name">Ross MacDonald</h1>
-    <hr />
-    <div class="sub-header">
-        <h2 class="corner-sub">Full Stack Web Developer</h2>
+<svelte:window bind:scrollY={y} />
+{#if y < 200}
+    <div out:fade class="container">
+        <h1 class="corner-name">Ross MacDonald</h1>
+        <hr />
+        <div class="sub-header">
+            <h2 class="corner-sub">Full Stack Web Developer</h2>
+        </div>
     </div>
-</div>
+{/if}

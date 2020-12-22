@@ -16,6 +16,9 @@
     }
 </style>
 
+<svelte:head>
+    <title>About Me</title>
+</svelte:head>
 <Layout>
     <h1 class="header">About Me</h1>
     <p>{$store.about1} <br /> <br /> {$store.about2}</p>

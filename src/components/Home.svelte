@@ -55,6 +55,9 @@
     }
 </style>
 
+<svelte:head>
+    <title>Ross MacDonald</title>
+</svelte:head>
 <div class="page-box">
     <div class="container">
         <h1>Ross MacDonald</h1>

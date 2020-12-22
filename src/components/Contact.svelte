@@ -130,6 +130,9 @@
     }
 </style>
 
+<svelte:head>
+    <title>Contact Me</title>
+</svelte:head>
 <Layout>
     <h1 class="header">Contact</h1>
 

@@ -73,6 +73,7 @@
         align-items: center;
         cursor: pointer;
     }
+
     .close-button:active {
         transform: scale(0.9);
     }

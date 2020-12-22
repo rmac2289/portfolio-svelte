@@ -1,6 +1,8 @@
 <script>
     import Layout from "./Layout.svelte";
     import { store } from "../store";
+    import { fly } from "svelte/transition";
+    let y;
 </script>
 
 <style>
@@ -45,6 +47,10 @@
     }
 </style>
 
+<svelte:window bind:scrollY={y} />
+<svelte:head>
+    <title>Experience</title>
+</svelte:head>
 <Layout>
     <h1 class="header">Experience</h1>
     <p class="main-p">
@@ -59,13 +65,15 @@
         <br />
         {$store.experience4}
     </p>
-    <h1 class="header">Tech</h1>
-    <div class="tech-grid">
-        {#each $store.tech as tech}
-            <div class="icon-box">
-                <i class={tech.class} />
-                <p>{tech.name}</p>
-            </div>
-        {/each}
-    </div>
+    {#if y > 250}
+        <h1 in:fly={{ y: 1000, duration: 750 }} class="header">Tech</h1>
+        <div in:fly={{ y: 1000, duration: 750 }} class="tech-grid">
+            {#each $store.tech as tech}
+                <div class="icon-box">
+                    <i class={tech.class} />
+                    <p>{tech.name}</p>
+                </div>
+            {/each}
+        </div>
+    {/if}
 </Layout>
