@@ -1,5 +1,5 @@
 <script>
-    import { fade } from "svelte/transition";
+    import { fade, fly } from "svelte/transition";
     import { store } from "../store";
 </script>
 
@@ -58,7 +58,7 @@
 <svelte:head>
     <title>Ross MacDonald</title>
 </svelte:head>
-<div class="page-box">
+<div in:fly={{ duration: 1000, y: -100 }} class="page-box">
     <div class="container">
         <h1>Ross MacDonald</h1>
         <div class="sub-header">

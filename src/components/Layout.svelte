@@ -1,6 +1,6 @@
 <script>
     import CornerLogo from "./CornerLogo.svelte";
-    import { slide } from "svelte/transition";
+    import { fade, slide } from "svelte/transition";
 </script>
 
 <style>
@@ -29,8 +29,11 @@
     }
 </style>
 
-<div in:slide={{ duration: 1000, delay: 600 }} class="page">
-    <div class="container">
+<div class="page">
+    <div
+        in:slide={{ duration: 1000, delay: 600 }}
+        out:fade={{ duration: 1 }}
+        class="container">
         <CornerLogo />
         <slot />
     </div>

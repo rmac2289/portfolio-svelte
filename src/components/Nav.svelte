@@ -109,7 +109,7 @@
                 class="link-div one"
                 in:fly={{ duration: 1000, y: 100 }}
                 out:fly={{ duration: 1000, delay: 600, y: 700 }}>
-                <a state={{ didItWork: 'Yes?' }} href="/">home</a>
+                <a href="/" noroute>home</a>
             </div>
             <div
                 on:click={setOpen}

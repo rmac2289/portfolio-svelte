@@ -23,16 +23,16 @@
         font-weight: initial;
     }
     i {
-        font-size: 2.5rem;
+        font-size: 1.75rem;
         color: white;
-        margin-right: 10px;
+        margin-right: 8px;
     }
     .tech-grid {
         padding: 1rem;
         border-left: 1px solid rgb(255, 255, 255, 0.5);
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 10px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5px;
     }
     .icon-box {
         display: flex;
@@ -43,6 +43,11 @@
     @media only screen and (min-width: 720px) {
         .tech-grid {
             grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+        }
+        i {
+            font-size: 2.5rem;
+            margin-right: 10px;
         }
     }
 </style>
@@ -65,7 +70,7 @@
         <br />
         {$store.experience4}
     </p>
-    {#if y > 250}
+    {#if y > 220}
         <h1 in:fly={{ y: 1000, duration: 750 }} class="header">Tech</h1>
         <div in:fly={{ y: 1000, duration: 750 }} class="tech-grid">
             {#each $store.tech as tech}

@@ -20,6 +20,7 @@
     "emailjs-com": "^2.6.4",
     "sirv-cli": "^1.0.0",
     "svelte-icons": "^2.1.0",
-    "svelte-routing": "^1.4.2"
+    "svelte-routing": "^1.4.2",
+    "three": "^0.123.0"
   }
 }
