@@ -134,7 +134,7 @@
     <title>Contact Me</title>
 </svelte:head>
 <Layout>
-    <h1 class="header">Contact</h1>
+    <h1 class="header">Get in touch</h1>
 
     <div class="content">
         <form>

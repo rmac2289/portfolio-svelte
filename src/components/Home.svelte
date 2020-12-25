@@ -1,6 +1,9 @@
 <script>
     import { fade, fly } from "svelte/transition";
-    import { store } from "../store";
+    import { readableStore, darkmode } from "../store";
+    const setDarkMode = () => {
+        darkmode.update((darkmode) => !darkmode);
+    };
 </script>
 
 <style>
@@ -27,6 +30,12 @@
         margin: 0;
         padding-left: 1px;
     }
+    button {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: 0.75s all linear;
+    }
     h1 {
         margin-bottom: 0;
         min-height: 50px;
@@ -47,6 +56,11 @@
         align-items: center;
         justify-content: center;
         height: 100vh;
+        transition: 0.75s all linear;
+    }
+    .dark {
+        background: rgb(0, 0, 0, 0.8);
+        transition: 0.75s all linear;
     }
     @media only screen and (min-width: 520px) {
         .sub-header {
@@ -58,16 +72,20 @@
 <svelte:head>
     <title>Ross MacDonald</title>
 </svelte:head>
-<div in:fly={{ duration: 1000, y: -100 }} class="page-box">
+<div
+    in:fly={{ duration: 1000, y: -100 }}
+    class={$darkmode ? 'page-box dark' : 'page-box'}>
     <div class="container">
         <h1>Ross MacDonald</h1>
         <div class="sub-header">
             <h2>
-                {#each $store.subtitle as letter, i}
+                {#each $readableStore.subtitle as letter, i}
                     <span
                         in:fade={{ delay: i * 100, duration: 1000 }}>{letter}</span>
                 {/each}
             </h2>
         </div>
     </div>
+    <button
+        on:click={setDarkMode}>{$darkmode ? 'day mode' : 'night mode'}</button>
 </div>

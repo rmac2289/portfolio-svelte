@@ -1,6 +1,6 @@
 <script>
     import Layout from "./Layout.svelte";
-    import { store } from "../store";
+    import { readableStore } from "../store";
     import { fly } from "svelte/transition";
     let y;
 </script>
@@ -21,6 +21,7 @@
         border-left: 1px solid rgb(255, 255, 255, 0.5);
         padding: 1rem;
         font-weight: initial;
+        transition: 1s all linear;
     }
     i {
         font-size: 1.75rem;
@@ -59,21 +60,21 @@
 <Layout>
     <h1 class="header">Experience</h1>
     <p class="main-p">
-        {$store.experience1}
+        {$readableStore.experience1}
         <br />
         <br />
-        {$store.experience2}
+        {$readableStore.experience2}
         <br />
         <br />
-        {$store.experience3}
+        {$readableStore.experience3}
         <br />
         <br />
-        {$store.experience4}
+        {$readableStore.experience4}
     </p>
-    {#if y > 220}
+    {#if y > 100}
         <h1 in:fly={{ y: 1000, duration: 750 }} class="header">Tech</h1>
         <div in:fly={{ y: 1000, duration: 750 }} class="tech-grid">
-            {#each $store.tech as tech}
+            {#each $readableStore.tech as tech}
                 <div class="icon-box">
                     <i class={tech.class} />
                     <p>{tech.name}</p>

@@ -1,6 +1,5 @@
 <script>
 	import Home from "./components/Home.svelte";
-	import About from "./components/About.svelte";
 	import Experience from "./components/Experience.svelte";
 	import Contact from "./components/Contact.svelte";
 	import Projects from "./components/Projects.svelte";
@@ -23,9 +22,6 @@
 		<Nav />
 		<Route path="/">
 			<Home />
-		</Route>
-		<Route path="/about">
-			<About />
 		</Route>
 		<Route path="/experience">
 			<Experience />

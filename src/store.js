@@ -1,6 +1,6 @@
-import { readable } from "svelte/store";
+import { readable, writable } from "svelte/store";
 
-export const store = readable({
+export const readableStore = readable({
   tech: [
     { name: "React", class: "fab fa-react" },
     { name: "Node.js", class: "fab fa-node-js" },
@@ -84,3 +84,5 @@ export const store = readable({
     "r",
   ],
 });
+
+export const darkmode = writable(false);
