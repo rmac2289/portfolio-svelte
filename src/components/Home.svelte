@@ -4,6 +4,7 @@
     const setDarkMode = () => {
         darkmode.update((darkmode) => !darkmode);
     };
+    import Switch from "./Switch.svelte";
 </script>
 
 <style>
@@ -86,6 +87,5 @@
             </h2>
         </div>
     </div>
-    <button
-        on:click={setDarkMode}>{$darkmode ? 'day mode' : 'night mode'}</button>
+    <Switch bind:checked={$darkmode} />
 </div>
