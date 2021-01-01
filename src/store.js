@@ -2,18 +2,21 @@ import { readable, writable } from "svelte/store";
 
 export const readableStore = readable({
   tech: [
-    { name: "React", class: "fab fa-react" },
-    { name: "Node.js", class: "fab fa-node-js" },
-    { name: "JavaScript", class: "fab fa-js" },
-    { name: "HTML5", class: "fab fa-html5" },
-    { name: "Vue", class: "fab fa-vuejs" },
-    { name: "CSS3", class: "fab fa-css3" },
-    { name: "git", class: "fab fa-git-alt" },
-    { name: "GitHub", class: "fab fa-github" },
-    { name: "bash", class: "fas fa-terminal" },
-    { name: "npm", class: "fab fa-npm" },
-    { name: "yarn", class: "fab fa-yarn" },
-    { name: "Python", class: "fab fa-python" },
+    { name: "React", class: "fab fa-react", color: "#61dafb" },
+    { name: "Node.js", class: "fab fa-node-js", color: "#68a063" },
+    { name: "JavaScript", class: "fab fa-js", color: "#eace2c" },
+    { name: "HTML5", class: "fab fa-html5", color: "rgb(234,100,51)" },
+    { name: "Vue", class: "fab fa-vuejs", color: "#41B883" },
+    { name: "CSS3", class: "fab fa-css3", color: "#264de4" },
+    { name: "git", class: "fab fa-git-alt", color: "#f05030" },
+    { name: "GitHub", class: "fab fa-github", color: "rgb(210,105,35)" },
+    { name: "bash", class: "fas fa-terminal", color: "white" },
+    { name: "npm", class: "fab fa-npm", color: "rgb(181,52,54)" },
+    { name: "yarn", class: "fab fa-yarn", color: "rgb(27,78,100)" },
+    { name: "Python", class: "fab fa-python", color: "rgb(246,188,65)" },
+    { name: "mongoDB", class: "", color: "#12924F" },
+    { name: "postgres", class: "", color: "rgb(52,101,139)" },
+    { name: "svelte", class: "", color: "rgb(252,62,29)" },
   ],
   experience1: `As a developer I feel most at home writing full-stack web apps with 
     JavaScript. Though true, that's a wild oversimplification; I've worked with 
