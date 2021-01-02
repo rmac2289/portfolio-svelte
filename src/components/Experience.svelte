@@ -48,12 +48,16 @@
     .icon-box {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        border: 1px solid rgb(255, 255, 255, 0.6);
         padding: 0.5rem;
         padding-left: 1rem;
         padding-right: 1rem;
         border-radius: 1px;
         background: rgb(0, 0, 0, 0.5);
+        transition: 0.5s all ease-in;
+    }
+    .icon-box:hover {
+        background: rgb(0, 0, 0, 0.75);
+        transform: scale(1.1);
     }
     .name {
         display: flex;
@@ -103,7 +107,7 @@
         <h1 in:fly={{ y: 1000, duration: 750 }} class="header">Tech</h1>
         <div in:fly={{ y: 1000, duration: 750 }} class="tech-grid">
             {#each $readableStore.tech as tech}
-                <div style="border:1px solid {tech.color}" class="icon-box">
+                <div class="icon-box">
                     {#if tech.class[0] === 'f'}
                         <i class={tech.class} style="color:{tech.color}" />
                     {/if}

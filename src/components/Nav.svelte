@@ -6,6 +6,7 @@
     }
     import { links } from "svelte-routing";
     import { darkmode } from "../store";
+    let y;
 </script>
 
 <style>
@@ -87,15 +88,20 @@
     }
 </style>
 
+<svelte:window bind:scrollY={y} />
+
 <nav use:links>
     {#if !open}
-        <div
-            aria-label="Open Navigation"
-            in:fade={{ delay: 500 }}
-            class={'open-button'}
-            on:mouseenter={setOpen}>
-            <p class="open-button-text">|||</p>
-        </div>
+        {#if y < 150}
+            <div
+                aria-label="Open Navigation"
+                in:fly={{ delay: 500, y: -100, duration: 1000 }}
+                out:fly={{ duration: 1000, y: -100 }}
+                class={'open-button'}
+                on:mouseenter={setOpen}>
+                <p class="open-button-text">|||</p>
+            </div>
+        {/if}
     {:else}
         <div
             aria-label="Close Navigation"
@@ -119,21 +125,21 @@
                 on:click={setOpen}
                 class={$darkmode ? 'link-div dark' : 'link-div'}
                 in:fly={{ duration: 1000, delay: 200, y: 100 }}
-                out:fly={{ duration: 1000, delay: 400, y: 500 }}>
+                out:fly={{ duration: 1000, delay: 500, y: 600 }}>
                 <a href="/experience">experience</a>
             </div>
             <div
                 on:click={setOpen}
                 class={$darkmode ? 'link-div dark' : 'link-div'}
-                in:fly={{ duration: 1000, delay: 600, y: 100 }}
-                out:fly={{ duration: 1000, y: 100 }}>
+                in:fly={{ duration: 1000, delay: 300, y: 100 }}
+                out:fly={{ duration: 1000, delay: 400, y: 500 }}>
                 <a className="contact" href="/projects"> my work </a>
             </div>
             <div
                 on:click={setOpen}
                 class={$darkmode ? 'link-div dark' : 'link-div'}
                 in:fly={{ duration: 1000, delay: 400, y: 100 }}
-                out:fly={{ duration: 1000, delay: 200, y: 300 }}>
+                out:fly={{ duration: 1000, delay: 300, y: 400 }}>
                 <a href="/resume"> resume </a>
             </div>
             <div
@@ -141,7 +147,7 @@
                 onclick="location.href='https://ross-scott-macdonald.medium.com'"
                 class={$darkmode ? 'link-div dark' : 'link-div'}
                 in:fly={{ duration: 1000, delay: 300, y: 100 }}
-                out:fly={{ duration: 1000, delay: 300, y: 400 }}>
+                out:fly={{ duration: 1000, delay: 200, y: 300 }}>
                 <a
                     id="blog"
                     href="https://ross-scott-macdonald.com/blog"
