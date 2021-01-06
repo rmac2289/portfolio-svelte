@@ -1,20 +1,6 @@
 <script>
     import Layout from "./Layout.svelte";
-    let meal = "images/meal.png";
-    let fyp = "images/fyp.png";
-    let fypmobile = "images/fypmobilemap.jpg";
-    let hearsay = "images/hearsay.png";
-    let safety = "images/safety.PNG";
-    import Carousel from "./Carousel.svelte";
-    let safetyImages = [
-        "images/safetyhome.PNG",
-        "images/safetyadd.PNG",
-        "images/safetyadded.PNG",
-        "images/safetystate.PNG",
-        "images/safetylist.PNG",
-        "images/safetycall.PNG",
-        "images/safetyhomebottom.PNG",
-    ];
+    import Project from "./Project.svelte";
     import { Image } from "@cloudinary/svelte";
     import { cloud_name } from "../../config";
 </script>
@@ -34,23 +20,8 @@
 </svelte:head>
 <Layout>
     <h1 class="header">Projects</h1>
-    <Carousel images={safetyImages} />
-    <div class="grid">
-        <div id="meal">
-            <img width="400" height="450" src={meal} alt="meal" />
-        </div>
-        <div id="fyp"><img width="500" height="325" src={fyp} alt="fyp" /></div>
-        <div id="hearsay">
-            <img width="500" height="325" src={hearsay} alt="hearsay" />
-        </div>
-        <div id="fypmobile">
-            <img width="175" height="325" src={fypmobile} alt="fypmobile" />
-        </div>
 
-        <div id="safety">
-            <img width="175" height="325" src={safety} alt="safety" />
-        </div>
-    </div>
+    <Project />
 </Layout>
 
 <!-- <div id="meal">

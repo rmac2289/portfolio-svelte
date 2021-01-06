@@ -1,7 +1,8 @@
 <script>
     export let images = [];
+    export let height;
+    export let width;
     import { flip } from "svelte/animate";
-    import { quartInOut, sineInOut, sineOut } from "svelte/easing";
     let currentIdx = 0;
     const next = () => {
         currentIdx = (currentIdx + 1) % images.length;
@@ -13,13 +14,12 @@
             currentIdx = (currentIdx - 1) % images.length;
         }
     };
-    import { slide, blur } from "svelte/transition";
+
+    import { blur } from "svelte/transition";
 </script>
 
 <style>
     .container {
-        width: 350px;
-        height: 600px;
         position: relative;
     }
     .next-container,
@@ -34,12 +34,10 @@
     }
     .next-container {
         right: -20px;
-        height: 600px;
         width: 20px;
     }
     .prev-container {
         left: -20px;
-        height: 600px;
         width: 20px;
     }
     .prev-container:hover,
@@ -52,17 +50,17 @@
     }
 </style>
 
-<div class="container">
-    <div on:click={prev} class="next-container">
+<div class="container" style={`height:${height}px; width:${width}px;`}>
+    <div on:click={prev} class="next-container" style={`height: ${height}px`}>
         <div class="next"><i class="fas fa-caret-right" /></div>
     </div>
-    <div on:click={next} class="prev-container">
+    <div on:click={next} class="prev-container" style={`height: ${height}px`}>
         <div class="prev"><i class="fas fa-caret-left" /></div>
     </div>
     {#each [images[currentIdx]] as photo (currentIdx)}
         <img
-            height="600"
-            width="350"
+            height={`${height}`}
+            width={`${width}`}
             transition:blur={{ duration: 600 }}
             src={photo}
             alt="carousel"
