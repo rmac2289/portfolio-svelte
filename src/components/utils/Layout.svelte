@@ -1,7 +1,7 @@
 <script>
     import CornerLogo from "./CornerLogo.svelte";
     import { fade, slide } from "svelte/transition";
-    import { darkmode } from "../store";
+    import { darkmode } from "../../store";
     const setDarkMode = () => {
         darkmode.update((darkmode) => !darkmode);
     };

@@ -1,6 +1,6 @@
 <script>
     import { store } from "../store";
-    import Layout from "./Layout.svelte";
+    import Layout from "./utils/Layout.svelte";
 </script>
 
 <style>

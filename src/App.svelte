@@ -4,7 +4,7 @@
 	import Contact from "./components/Contact.svelte";
 	import Projects from "./components/Projects.svelte";
 	import Resume from "./components/Resume.svelte";
-	import Nav from "./components/Nav.svelte";
+	import Nav from "./components/utils/Nav.svelte";
 	import { Router, Route } from "svelte-routing";
 	export let url = "";
 </script>

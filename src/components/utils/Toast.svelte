@@ -1,6 +1,6 @@
 <script>
     import { slide } from "svelte/transition";
-    import { alert } from "../alert";
+    import { alert } from "../../alert";
     function closeAlert() {
         alert.set({
             text: $alert.text,

@@ -5,7 +5,7 @@
         open = !open;
     }
     import { links } from "svelte-routing";
-    import { darkmode } from "../store";
+    import { darkmode } from "../../store";
     let y;
 </script>
 

@@ -1,5 +1,5 @@
 <script>
-    import Layout from "./Layout.svelte";
+    import Layout from "./utils/Layout.svelte";
     import { readableStore } from "../store";
     import { fly } from "svelte/transition";
     let y;

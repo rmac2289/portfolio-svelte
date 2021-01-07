@@ -18,40 +18,55 @@ export const readableStore = readable({
     { name: "postgres", class: "", color: "rgb(52,101,139)" },
     { name: "svelte", class: "", color: "rgb(252,62,29)" },
   ],
-  safetyImages: [
-    "images/safetyhome.PNG",
-    "images/safetyadd.PNG",
-    "images/safetyadded.PNG",
-    "images/safetystate.PNG",
-    "images/safetylist.PNG",
-    "images/safetycall.PNG",
-    "images/safetyhomebottom.PNG",
-  ],
-  fypMobileImages: [
-    "images/mobileparkhome.png",
-    "images/mobileparklogin.png",
-    "images/mobileparkmap.png",
-    "images/mobileparkpark.png",
-    "images/mapMobile.jpg",
-  ],
-  hearsayImages: [
-    "images/hearsay1.png",
-    "images/hearsay2.png",
-    "images/hearsay3.png",
-    "images/hearsay4.png",
-  ],
-  fypImages: [
-    "images/fyphome.jpg",
-    "images/fypcomments.jpg",
-    "images/fyplist.jpg",
-    "images/fyppark.jpg",
-    "images/fypsignup.jpg",
-  ],
-  mealImages: [
-    "images/meal.png",
-    "images/meallist.png",
-    "images/mealingredients.png",
-  ],
+  safetyBlanket: {
+    name: "Safety Blanket",
+    images: [
+      "images/safetyhome.PNG",
+      "images/safetyadd.PNG",
+      "images/safetyadded.PNG",
+      "images/safetystate.PNG",
+      "images/safetylist.PNG",
+      "images/safetycall.PNG",
+      "images/safetyhomebottom.PNG",
+    ],
+  },
+  fypMobile: {
+    name: "Find Your Park Mobile",
+    images: [
+      "images/mobileparkhome.png",
+      "images/mobileparklogin.png",
+      "images/mobileparkmap.png",
+      "images/mobileparkpark.png",
+      "images/mapMobile.jpg",
+    ],
+  },
+  hearsay: {
+    name: "Hearsay",
+    images: [
+      "images/hearsay1.png",
+      "images/hearsay2.png",
+      "images/hearsay3.png",
+      "images/hearsay4.png",
+    ],
+  },
+  fyp: {
+    name: "Find Your Park",
+    images: [
+      "images/fyphome.jpg",
+      "images/fypcomments.jpg",
+      "images/fyplist.jpg",
+      "images/fyppark.jpg",
+      "images/fypsignup.jpg",
+    ],
+  },
+  mealGenerator: {
+    name: "Meal Generator",
+    images: [
+      "images/meal.png",
+      "images/meallist.png",
+      "images/mealingredients.png",
+    ],
+  },
   experience1: `As a developer I feel most at home writing full-stack web apps with 
     JavaScript. Though true, that's a wild oversimplification; I've worked with 
     countless frameworks, libraries and tools while digging deep into problems to 

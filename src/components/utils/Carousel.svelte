@@ -8,11 +8,9 @@
         currentIdx = (currentIdx + 1) % images.length;
     };
     const prev = () => {
-        if (currentIdx === 0) {
-            currentIdx = images.length - 1;
-        } else {
-            currentIdx = (currentIdx - 1) % images.length;
-        }
+        currentIdx === 0
+            ? (currentIdx = images.length - 1)
+            : (currentIdx = (currentIdx - 1) % images.length);
     };
 
     import { blur } from "svelte/transition";
@@ -45,17 +43,17 @@
         background: rgb(0, 0, 0, 0.3);
     }
     i {
-        font-size: 42px;
+        font-size: 24px;
         color: rgb(255, 255, 255, 0.5);
     }
 </style>
 
 <div class="container" style={`height:${height}px; width:${width}px;`}>
     <div on:click={prev} class="next-container" style={`height: ${height}px`}>
-        <div class="next"><i class="fas fa-caret-right" /></div>
+        <div class="next"><i class="fas fa-chevron-right" /></div>
     </div>
     <div on:click={next} class="prev-container" style={`height: ${height}px`}>
-        <div class="prev"><i class="fas fa-caret-left" /></div>
+        <div class="prev"><i class="fas fa-chevron-left" /></div>
     </div>
     {#each [images[currentIdx]] as photo (currentIdx)}
         <img

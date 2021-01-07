@@ -3,12 +3,12 @@
         emailjs.init("user_uXigZw2RYzgOCTjVxakmu");
     })();
     import { alert } from "../alert";
-    import Layout from "./Layout.svelte";
+    import Layout from "./utils/Layout.svelte";
     import emailjs from "emailjs-com";
     let email = "";
     let name = "";
     let message = "";
-    import Toast from "./Toast.svelte";
+    import Toast from "./utils/Toast.svelte";
 
     function handleSubmit() {
         if (!email) {

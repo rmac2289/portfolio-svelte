@@ -4,7 +4,7 @@
     const setDarkMode = () => {
         darkmode.update((darkmode) => !darkmode);
     };
-    import Switch from "./Switch.svelte";
+    import Switch from "./utils/Switch.svelte";
 </script>
 
 <style>
