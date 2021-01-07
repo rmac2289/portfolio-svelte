@@ -17,7 +17,7 @@
     .grid {
         display: grid;
         grid-template-columns: 1fr;
-        gap: 50px;
+        gap: 30px;
     }
     @media only screen and (min-width: 720px) {
         .grid {
