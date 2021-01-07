@@ -32,6 +32,11 @@ body::before {
   margin: 0;
   padding: 0;
 }
+:root {
+  --main-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1),
+    0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1),
+    0 16px 16px rgba(0, 0, 0, 0.1);
+}
 a {
   text-decoration: none;
 }

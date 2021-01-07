@@ -13,55 +13,59 @@
             : (currentIdx = (currentIdx - 1) % images.length);
     };
 
-    import { blur } from "svelte/transition";
+    import { blur, fade } from "svelte/transition";
 </script>
 
 <style>
     .container {
         position: relative;
     }
-    .next-container,
-    .prev-container {
+    .controls {
         position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: transparent;
         display: flex;
-        justify-content: center;
-        align-items: center;
-        background: rgb(0, 0, 0, 0.5);
-        cursor: pointer;
-        transition: 0.75s all linear;
+        justify-content: space-between;
     }
-    .next-container {
-        right: -20px;
+    .prev,
+    .next {
+        width: 100%;
+        height: 20px;
         width: 20px;
+        padding: 15px;
     }
-    .prev-container {
-        left: -20px;
-        width: 20px;
+    .prev {
+        text-align: left;
     }
-    .prev-container:hover,
-    .next-container:hover {
-        background: rgb(0, 0, 0, 0.3);
+    .next {
+        text-align: right;
     }
     i {
         font-size: 24px;
-        color: rgb(255, 255, 255, 0.5);
+        color: rgb(255, 255, 255);
     }
 </style>
 
-<div class="container" style={`height:${height}px; width:${width}px;`}>
-    <div on:click={prev} class="next-container" style={`height: ${height}px`}>
-        <div class="next"><i class="fas fa-chevron-right" /></div>
-    </div>
-    <div on:click={next} class="prev-container" style={`height: ${height}px`}>
-        <div class="prev"><i class="fas fa-chevron-left" /></div>
-    </div>
-    {#each [images[currentIdx]] as photo (currentIdx)}
+{#each [images[currentIdx]] as photo (currentIdx)}
+    <div
+        transition:blur={{ duration: 600 }}
+        animate:flip
+        class="container"
+        style={`height:${height}px; width:${width}px;`}>
+        <div transition:blur={{ duration: 600 }} class="controls">
+            <div on:click={next} class="prev">
+                <i class="fas fa-chevron-left" />
+            </div>
+            <div on:click={prev} class="next">
+                <i class="fas fa-chevron-right" />
+            </div>
+        </div>
         <img
             height={`${height}`}
             width={`${width}`}
-            transition:blur={{ duration: 600 }}
             src={photo}
-            alt="carousel"
-            animate:flip />
-    {/each}
-</div>
+            alt="carousel" />
+    </div>
+{/each}

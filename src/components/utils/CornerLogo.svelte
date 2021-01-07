@@ -1,6 +1,6 @@
 <script>
     let y;
-    import { fade } from "svelte/transition";
+    import { fly } from "svelte/transition";
 </script>
 
 <style>
@@ -59,7 +59,10 @@
 
 <svelte:window bind:scrollY={y} />
 {#if y < 200}
-    <div out:fade class="container">
+    <div
+        in:fly={{ delay: 500, y: -100, duration: 1000 }}
+        out:fly={{ duration: 1000, y: -100 }}
+        class="container">
         <h1 class="corner-name">Ross MacDonald</h1>
         <hr />
         <div class="sub-header">

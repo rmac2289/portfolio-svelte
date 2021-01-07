@@ -20,6 +20,7 @@ export const readableStore = readable({
   ],
   safetyBlanket: {
     name: "Safety Blanket",
+    tech: ["React", "Node.js", "JavaScript", "HTML5", "CSS3", "npm", "git"],
     images: [
       "images/safetyhome.PNG",
       "images/safetyadd.PNG",
@@ -32,6 +33,7 @@ export const readableStore = readable({
   },
   fypMobile: {
     name: "Find Your Park Mobile",
+    tech: ["React", "Node.js", "JavaScript", "HTML5", "CSS3", "npm", "git"],
     images: [
       "images/mobileparkhome.png",
       "images/mobileparklogin.png",
@@ -42,6 +44,7 @@ export const readableStore = readable({
   },
   hearsay: {
     name: "Hearsay",
+    tech: ["React", "Node.js", "JavaScript", "HTML5", "CSS3", "npm", "git"],
     images: [
       "images/hearsay1.png",
       "images/hearsay2.png",
@@ -51,6 +54,7 @@ export const readableStore = readable({
   },
   fyp: {
     name: "Find Your Park",
+    tech: ["React", "Node.js", "JavaScript", "HTML5", "CSS3", "npm", "git"],
     images: [
       "images/fyphome.jpg",
       "images/fypcomments.jpg",
@@ -61,11 +65,17 @@ export const readableStore = readable({
   },
   mealGenerator: {
     name: "Meal Generator",
+    tech: ["JavaScript", "HTML5", "CSS3", "git"],
     images: [
       "images/meal.png",
       "images/meallist.png",
       "images/mealingredients.png",
     ],
+  },
+  portfolio: {
+    name: "Portfolio",
+    tech: ["JavaScript", "HTML5", "CSS3", "git"],
+    images: ["images/portfoliohome.png"],
   },
   experience1: `As a developer I feel most at home writing full-stack web apps with 
     JavaScript. Though true, that's a wild oversimplification; I've worked with 

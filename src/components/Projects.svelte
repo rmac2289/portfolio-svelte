@@ -4,6 +4,7 @@
     import Hearsay from "./projects/Hearsay.svelte";
     import FypMobile from "./projects/FypMobile.svelte";
     import Fyp from "./projects/Fyp.svelte";
+    import Portfolio from "./projects/Portfolio.svelte";
     import MealGenerator from "./projects/MealGenerator.svelte";
     import { Image } from "@cloudinary/svelte";
     import { cloud_name } from "../../config";
@@ -15,8 +16,13 @@
     }
     .grid {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         gap: 50px;
+    }
+    @media only screen and (min-width: 720px) {
+        .grid {
+            grid-template-columns: 1fr 1fr;
+        }
     }
 </style>
 
@@ -26,11 +32,12 @@
 <Layout>
     <h1 class="header">Projects</h1>
     <div class="grid">
-        <MealGenerator />
-        <Fyp />
-        <FypMobile />
-        <Hearsay />
         <SafetyBlanket />
+        <Fyp />
+        <Hearsay />
+        <Portfolio />
+        <FypMobile />
+        <MealGenerator />
     </div>
 </Layout>
 
