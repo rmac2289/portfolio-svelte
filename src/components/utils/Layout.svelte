@@ -1,6 +1,7 @@
 <script>
     import CornerLogo from "./CornerLogo.svelte";
-    import { fade, slide } from "svelte/transition";
+    import { fade, fly } from "svelte/transition";
+    import { cubicInOut, elasticInOut, quadInOut } from "svelte/easing";
     import { darkmode } from "../../store";
     const setDarkMode = () => {
         darkmode.update((darkmode) => !darkmode);
@@ -10,7 +11,7 @@
 
 <style>
     .container {
-        width: 90%;
+        width: 95%;
         height: 100%;
         margin-top: 100px;
         margin-bottom: 100px;
@@ -28,24 +29,32 @@
         padding: 1rem;
         transition: 0.75s all linear;
     }
-
+    @media only screen and (min-width: 520px) {
+        .container {
+            width: 85%;
+        }
+    }
     @media only screen and (min-width: 720px) {
         .container {
-            width: 70%;
-        }
-        .page {
+            width: 80%;
             min-width: 400px;
+        }
+    }
+    @media only screen and (min-width: 1024) {
+        .container {
+            width: 75%;
         }
     }
 </style>
 
 <div class={$darkmode ? 'page dark' : 'page'}>
-    <div
-        in:slide={{ duration: 1000, delay: 600 }}
-        out:fade={{ duration: 1 }}
-        class="container">
+    <div class="container">
         <CornerLogo />
-        <slot />
+        <div
+            in:fly={{ duration: 1500, y: 750, delay: 600 }}
+            out:fade={{ duration: 1 }}>
+            <slot />
+        </div>
     </div>
     <Switch bind:checked={$darkmode} />
 </div>

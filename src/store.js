@@ -14,13 +14,49 @@ export const readableStore = readable({
     { name: "npm", class: "fab fa-npm", color: "rgb(181,52,54)" },
     { name: "yarn", class: "fab fa-yarn", color: "rgb(27,78,100)" },
     { name: "Python", class: "fab fa-python", color: "rgb(246,188,65)" },
-    { name: "mongoDB", class: "", color: "#12924F" },
-    { name: "postgres", class: "", color: "rgb(52,101,139)" },
-    { name: "svelte", class: "", color: "rgb(252,62,29)" },
+    { name: "mongoDB", class: "", color: "#12924F", src: "images/mongodb.png" },
+    { name: "Expo", class: "", color: "#fff", src: "images/expo.png" },
+    { name: "GraphQL", class: "", color: "", src: "images/graphql.png" },
+    { name: "Cloudinary", class: "", color: "", src: "images/cloudinary.png" },
+    { name: "Heroku", class: "", color: "", src: "images/heroku.png" },
+    { name: "Netlify", class: "", color: "", src: "images/netlify.png" },
+    { name: "Vercel", class: "", color: "", src: "images/vercel.png" },
+
+    {
+      name: "postgres",
+      class: "",
+      color: "rgb(52,101,139)",
+      src: "images/elephant.png",
+    },
+    {
+      name: "svelte",
+      class: "",
+      color: "rgb(252,62,29)",
+      src: "images/svelte.png",
+    },
+    { name: "Knex", class: "", color: "", src: "images/knex.png" },
   ],
   safetyBlanket: {
     name: "Safety Blanket",
-    tech: ["React", "Node.js", "JavaScript", "HTML5", "CSS3", "npm", "git"],
+    tech: {
+      frontend: [
+        { name: "React Native", class: "fab fa-react", color: "#61dafb" },
+        { name: "JavaScript", class: "fab fa-js", color: "#eace2c" },
+        { name: "HTML5", class: "fab fa-html5", color: "rgb(234,100,51)" },
+        { name: "CSS3", class: "fab fa-css3", color: "#264de4" },
+        { name: "GraphQL", class: "", color: "", src: "images/graphql.png" },
+      ],
+      backend: [
+        { name: "Node.js", class: "fab fa-node-js", color: "#68a063" },
+        { name: "GraphQL", class: "", color: "", src: "images/graphql.png" },
+      ],
+      misc: [
+        { name: "npm", class: "fab fa-npm", color: "rgb(181,52,54)" },
+        { name: "git", class: "fab fa-git-alt", color: "#f05030" },
+        { name: "Expo", class: "", color: "#fff", src: "images/expo.png" },
+        { name: "GitHub", class: "fab fa-github", color: "rgb(210,105,35)" },
+      ],
+    },
     images: [
       "images/safetyhome.PNG",
       "images/safetyadd.PNG",
@@ -33,7 +69,30 @@ export const readableStore = readable({
   },
   fypMobile: {
     name: "Find Your Park Mobile",
-    tech: ["React", "Node.js", "JavaScript", "HTML5", "CSS3", "npm", "git"],
+    tech: {
+      frontend: [
+        { name: "React Native", class: "fab fa-react", color: "#61dafb" },
+        { name: "JavaScript", class: "fab fa-js", color: "#eace2c" },
+        { name: "HTML5", class: "fab fa-html5", color: "rgb(234,100,51)" },
+        { name: "CSS3", class: "fab fa-css3", color: "#264de4" },
+      ],
+      backend: [
+        {
+          name: "Postgres",
+          class: "",
+          color: "",
+          src: "images/elephant.png",
+        },
+        { name: "Node.js", class: "fab fa-node-js", color: "#68a063" },
+        { name: "Knex", class: "", color: "", src: "images/knex.png" },
+      ],
+      misc: [
+        { name: "npm", class: "fab fa-npm", color: "rgb(181,52,54)" },
+        { name: "git", class: "fab fa-git-alt", color: "#f05030" },
+        { name: "Heroku", class: "", color: "", src: "images/heroku.png" },
+        { name: "GitHub", class: "fab fa-github", color: "rgb(210,105,35)" },
+      ],
+    },
     images: [
       "images/mobileparkhome.png",
       "images/mobileparklogin.png",
@@ -44,7 +103,25 @@ export const readableStore = readable({
   },
   hearsay: {
     name: "Hearsay",
-    tech: ["React", "Node.js", "JavaScript", "HTML5", "CSS3", "npm", "git"],
+    tech: {
+      frontend: [
+        { name: "React", class: "fab fa-react", color: "#61dafb" },
+        { name: "JavaScript", class: "fab fa-js", color: "#eace2c" },
+        { name: "HTML5", class: "fab fa-html5", color: "rgb(234,100,51)" },
+        { name: "CSS3", class: "fab fa-css3", color: "#264de4" },
+      ],
+      backend: [
+        { name: "Node.js", class: "fab fa-node-js", color: "#68a063" },
+        { name: "Postgres", class: "", color: "", src: "images/elephant.png" },
+        { name: "Knex", class: "", color: "", src: "images/knex.png" },
+      ],
+      misc: [
+        { name: "npm", class: "fab fa-npm", color: "rgb(181,52,54)" },
+        { name: "Vercel", class: "", color: "", src: "images/vercel.png" },
+        { name: "git", class: "fab fa-git-alt", color: "#f05030" },
+        { name: "GitHub", class: "fab fa-github", color: "rgb(210,105,35)" },
+      ],
+    },
     images: [
       "images/hearsay1.png",
       "images/hearsay2.png",
@@ -54,7 +131,26 @@ export const readableStore = readable({
   },
   fyp: {
     name: "Find Your Park",
-    tech: ["React", "Node.js", "JavaScript", "HTML5", "CSS3", "npm", "git"],
+    tech: {
+      frontend: [
+        { name: "React", class: "fab fa-react", color: "#61dafb" },
+        { name: "JavaScript", class: "fab fa-js", color: "#eace2c" },
+        { name: "HTML5", class: "fab fa-html5", color: "rgb(234,100,51)" },
+        { name: "CSS3", class: "fab fa-css3", color: "#264de4" },
+      ],
+      backend: [
+        { name: "Node.js", class: "fab fa-node-js", color: "#68a063" },
+        { name: "Postgres", class: "", color: "", src: "images/elephant.png" },
+        { name: "Knex", class: "", color: "", src: "images/knex.png" },
+      ],
+      misc: [
+        { name: "npm", class: "fab fa-npm", color: "rgb(181,52,54)" },
+        { name: "Heroku", class: "", color: "", src: "images/heroku.png" },
+        { name: "Netlify", class: "", color: "", src: "images/netlify.png" },
+        { name: "git", class: "fab fa-git-alt", color: "#f05030" },
+        { name: "GitHub", class: "fab fa-github", color: "rgb(210,105,35)" },
+      ],
+    },
     images: [
       "images/fyphome.jpg",
       "images/fypcomments.jpg",
@@ -65,7 +161,18 @@ export const readableStore = readable({
   },
   mealGenerator: {
     name: "Meal Generator",
-    tech: ["JavaScript", "HTML5", "CSS3", "git"],
+    tech: {
+      frontend: [
+        { name: "JavaScript", class: "fab fa-js", color: "#eace2c" },
+        { name: "HTML5", class: "fab fa-html5", color: "rgb(234,100,51)" },
+        { name: "CSS3", class: "fab fa-css3", color: "#264de4" },
+      ],
+      misc: [
+        { name: "npm", class: "fab fa-npm", color: "rgb(181,52,54)" },
+        { name: "git", class: "fab fa-git-alt", color: "#f05030" },
+        { name: "GitHub", class: "fab fa-github", color: "rgb(210,105,35)" },
+      ],
+    },
     images: [
       "images/meal.png",
       "images/meallist.png",
@@ -74,7 +181,30 @@ export const readableStore = readable({
   },
   portfolio: {
     name: "Portfolio",
-    tech: ["JavaScript", "HTML5", "CSS3", "git"],
+    tech: {
+      frontend: [
+        {
+          name: "Svelte",
+          class: "",
+          color: "rgb(252,62,29)",
+          src: "images/svelte.png",
+        },
+        { name: "JavaScript", class: "fab fa-js", color: "#eace2c" },
+        { name: "HTML5", class: "fab fa-html5", color: "rgb(234,100,51)" },
+        { name: "CSS3", class: "fab fa-css3", color: "#264de4" },
+      ],
+      misc: [
+        { name: "npm", class: "fab fa-npm", color: "rgb(181,52,54)" },
+        { name: "git", class: "fab fa-git-alt", color: "#f05030" },
+        { name: "GitHub", class: "fab fa-github", color: "rgb(210,105,35)" },
+        {
+          name: "Cloudinary",
+          class: "",
+          color: "",
+          src: "images/cloudinary.png",
+        },
+      ],
+    },
     images: ["images/portfoliohome.png"],
   },
   experience1: `As a developer I feel most at home writing full-stack web apps with 

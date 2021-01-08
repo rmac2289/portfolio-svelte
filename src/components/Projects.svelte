@@ -8,6 +8,8 @@
     import MealGenerator from "./projects/MealGenerator.svelte";
     import { Image } from "@cloudinary/svelte";
     import { cloud_name } from "../../config";
+    import CornerLogo from "./utils/CornerLogo.svelte";
+    import { fly } from "svelte/transition";
 </script>
 
 <style>
@@ -19,10 +21,11 @@
         grid-template-columns: 1fr;
         gap: 30px;
     }
-    @media only screen and (min-width: 720px) {
-        .grid {
-            grid-template-columns: 1fr 1fr;
-        }
+    .container {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 100px;
     }
 </style>
 
@@ -31,7 +34,7 @@
 </svelte:head>
 <Layout>
     <h1 class="header">Projects</h1>
-    <div class="grid">
+    <div class="grid" transition:fly={{ duration: 1000, y: 500 }}>
         <SafetyBlanket />
         <Fyp />
         <Hearsay />

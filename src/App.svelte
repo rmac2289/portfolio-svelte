@@ -7,14 +7,10 @@
 	import Nav from "./components/utils/Nav.svelte";
 	import { Router, Route } from "svelte-routing";
 	export let url = "";
+	let pages = { path: "/", component: Home };
 </script>
 
 <style>
-	div {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
 </style>
 
 <Router {url}>

@@ -7,6 +7,7 @@
     import { links } from "svelte-routing";
     import { darkmode } from "../../store";
     let y;
+    console.dir(window);
 </script>
 
 <style>
@@ -15,6 +16,7 @@
         grid-template-columns: 1fr;
         height: 100vh;
         position: fixed;
+        z-index: 9999;
         top: 0;
         right: 0;
         left: 0;

@@ -3,30 +3,41 @@
     import { readableStore } from "../../store";
     let safetyImages = $readableStore.safetyBlanket.images;
     let techUsed = $readableStore.safetyBlanket.tech;
+    import { fly } from "svelte/transition";
+    import ProjectTechGrid from "../utils/ProjectTechGrid.svelte";
 </script>
 
 <style>
     .container {
         background: rgb(0, 0, 0, 0.5);
         padding: 1rem;
-        min-width: 350px;
+        min-width: 400px;
         box-shadow: var(--main-shadow);
     }
     h2 {
         color: rgba(255, 255, 255, 0.95);
         text-align: center;
-        font-family: "Lato", sans-serif;
         font-weight: 900;
-        padding-bottom: 0.5rem;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        margin: 0;
+        font-family: "Lato", sans-serif;
     }
-    p {
-        color: rgba(255, 255, 255, 0.95);
-        font-size: 1.25em;
+    .title {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        margin: 0;
+        height: 50px;
+        background: rgb(0, 0, 0, 0.35);
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 1.5rem;
+        align-items: center;
+        box-shadow: var(--main-shadow);
     }
-    i {
-        font-size: 28px;
-        color: rgba(255, 255, 255, 0.95);
+    .thumbnail {
+        padding: 0;
+        box-shadow: var(--main-shadow);
     }
     header {
         display: flex;
@@ -34,17 +45,7 @@
         background: rgba(255, 255, 255, 0.25);
         box-shadow: var(--main-shadow);
         padding: 0.5rem;
-    }
-    img {
-        box-shadow: var(--main-shadow);
-        padding: 0;
-    }
-    .icon-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        text-align: center;
-        gap: 20px;
-        padding: 1rem;
+        position: relative;
     }
     .header-left {
         width: 85%;
@@ -52,40 +53,22 @@
         margin-right: auto;
         margin: 0;
         margin-right: 0.5rem;
-        background: rgb(0, 0, 0, 0.5);
-        box-shadow: var(--main-shadow);
     }
-    .img {
-        height: 30px;
-        width: 30px;
-        text-align: center;
+    p {
+        color: rgba(255, 255, 255, 0.95);
+        font-size: 1.25em;
     }
 </style>
 
 <div class="container">
     <header>
-        <div class="header-left">
+        <div class="title">
             <h2>Safety Blanket</h2>
-            <div class="icon-grid">
-                {#each $readableStore.tech as tech}
-                    {#if techUsed.includes(tech.name)}
-                        <i class={tech.class} style="color:{tech.color}" />
-                    {/if}
-                {/each}
-                <div>
-                    <svg height="45" width="22" viewBox="0 0 13 26"><path
-                            d="M11.7 10.4C10.3 4.3 7.4 2.7 6.7 1.6 6.3 1.1 6.1 0.5 5.8 0 5.8 0.5 5.7 0.9 5.3 1.3 4.3 2.1 0.4 5.3 0 12.2-0.3 18.7 4.8 22.6 5.5 23 6 23.3 6.7 23 7 22.8 9.4 21.1 12.8 16.7 11.7 10.4"
-                            fill="#10AA50" />
-                        <path
-                            d="M6 19.5C5.8 21.1 5.7 22 5.4 22.9 5.4 22.9 5.6 24.4 5.8 26L6.3 26C6.5 24.9 6.7 23.8 6.9 22.7 6.2 22.3 6 20.9 6 19.5Z"
-                            fill="#B8C4C2" />
-                        <path
-                            d="M7 22.8L7 22.8C6.3 22.4 6.1 20.9 6.1 19.6 6.3 17.3 6.3 15 6.3 12.6 6.2 11.4 6.3 1.5 6 0 6.2 0.5 6.4 1 6.7 1.4 7.4 2.6 10.3 4.2 11.7 10.3 12.8 16.6 9.5 21.1 7 22.8Z"
-                            fill="#12924F" /></svg>
-                </div>
-            </div>
         </div>
-        <img width="150" src={safetyImages[0]} alt="fyp" />
+        <div class="header-left">
+            <ProjectTechGrid {techUsed} />
+        </div>
+        <img class="thumbnail" width="150" src={safetyImages[0]} alt="fyp" />
     </header>
     <div>
         <p>

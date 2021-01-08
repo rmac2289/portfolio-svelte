@@ -31,12 +31,6 @@
         margin: 0;
         padding-left: 1px;
     }
-    button {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        transition: 0.75s all linear;
-    }
     h1 {
         margin-bottom: 0;
         min-height: 50px;
@@ -56,7 +50,12 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 100vh;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: -1;
         transition: 0.75s all linear;
     }
     .dark {
@@ -74,7 +73,7 @@
     <title>Ross MacDonald</title>
 </svelte:head>
 <div
-    in:fly={{ duration: 1000, y: -100 }}
+    in:fly={{ duration: 1000, y: 300, delay: 400 }}
     class={$darkmode ? 'page-box dark' : 'page-box'}>
     <div class="container">
         <h1>Ross MacDonald</h1>
