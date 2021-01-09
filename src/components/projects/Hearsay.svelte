@@ -1,9 +1,22 @@
 <script>
     import Carousel from "../utils/Carousel.svelte";
     import { store, darkmode } from "../../store";
+    import { fade, slide } from "svelte/transition";
+
     let hearsayImages = $store.hearsay.images;
     let techUsed = $store.hearsay.tech;
     import ProjectTechGrid from "../utils/ProjectTechGrid.svelte";
+    let carouselOpen = false;
+    function openCarousel() {
+        carouselOpen = !carouselOpen;
+    }
+    function clickOutsideClose(e) {
+        console.dir(e.target);
+        if (carouselOpen && e.target.className.includes("carousel-container")) {
+            carouselOpen = !carouselOpen;
+        }
+        return;
+    }
 </script>
 
 <style>
@@ -13,6 +26,35 @@
         min-width: 400px;
         box-shadow: var(--main-shadow);
         transition: 0.75s all linear;
+    }
+    .carousel-container {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9998;
+    }
+    .carousel-container::before {
+        content: "";
+        position: absolute;
+        background-image: linear-gradient(
+            rgb(0, 0, 0, 0.75),
+            rgb(0, 0, 0, 0.75)
+        );
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        filter: blur(100px);
+        z-index: -1;
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
     .container-dark {
         background: rgb(0, 0, 0, 0.5);
@@ -67,7 +109,7 @@
         color: rgba(255, 255, 255, 0.95);
         font-size: 1.25em;
     }
-    @media only screen and (min-width: 720px) {
+    @media only screen and (min-width: 900px) {
         .thumbnail {
             width: 350px;
         }
@@ -82,7 +124,11 @@
         <div class="header-left">
             <ProjectTechGrid {techUsed} />
         </div>
-        <img class="thumbnail" src={hearsayImages[0]} alt="fyp" />
+        <img
+            on:click={openCarousel}
+            class="thumbnail"
+            src={hearsayImages[0]}
+            alt="fyp" />
     </header>
     <div>
         <p>
@@ -93,5 +139,12 @@
             feel we need more venues for people to make their voices heard.
         </p>
     </div>
-    <!-- <Carousel height="400" width="537" images={hearsayImages} /> -->
+    {#if carouselOpen}
+        <div
+            transition:fade
+            on:click={clickOutsideClose}
+            class="carousel-container">
+            <Carousel height="400" width="537" images={hearsayImages} />
+        </div>
+    {/if}
 </div>

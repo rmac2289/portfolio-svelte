@@ -10,9 +10,6 @@
 	let pages = { path: "/", component: Home };
 </script>
 
-<style>
-</style>
-
 <Router {url}>
 	<div>
 		<Nav />

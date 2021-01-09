@@ -19,7 +19,9 @@
 <style>
     .container {
         position: relative;
+        box-shadow: var(--main-shadow);
     }
+
     .controls {
         position: absolute;
         left: 0;
@@ -48,20 +50,14 @@
     }
 </style>
 
+<div on:click={next} class="prev"><i class="fas fa-chevron-left" /></div>
 {#each [images[currentIdx]] as photo (currentIdx)}
     <div
         transition:blur={{ duration: 600 }}
         animate:flip
         class="container"
         style={`height:${height}px; width:${width}px;`}>
-        <div transition:blur={{ duration: 600 }} class="controls">
-            <div on:click={next} class="prev">
-                <i class="fas fa-chevron-left" />
-            </div>
-            <div on:click={prev} class="next">
-                <i class="fas fa-chevron-right" />
-            </div>
-        </div>
+        <div transition:blur={{ duration: 600 }} class="controls" />
         <img
             height={`${height}`}
             width={`${width}`}
@@ -69,3 +65,4 @@
             alt="carousel" />
     </div>
 {/each}
+<div on:click={prev} class="next"><i class="fas fa-chevron-right" /></div>

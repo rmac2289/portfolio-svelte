@@ -1,9 +1,21 @@
 <script>
     import Carousel from "../utils/Carousel.svelte";
     import { store, darkmode } from "../../store";
+    import { fade } from "svelte/transition";
     let fypImages = $store.fyp.images;
     let techUsed = $store.fyp.tech;
     import ProjectTechGrid from "../utils/ProjectTechGrid.svelte";
+    let carouselOpen = false;
+    function openCarousel() {
+        carouselOpen = !carouselOpen;
+    }
+    function clickOutsideClose(e) {
+        console.dir(e.target);
+        if (carouselOpen && e.target.className.includes("carousel-container")) {
+            carouselOpen = !carouselOpen;
+        }
+        return;
+    }
 </script>
 
 <style>
@@ -14,11 +26,40 @@
         box-shadow: var(--main-shadow);
         transition: 0.75s all linear;
     }
+    .carousel-container {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9998;
+        transition: 0.75s all linear;
+    }
+    .carousel-container::before {
+        content: "";
+        position: absolute;
+        background-image: linear-gradient(
+            rgb(0, 0, 0, 0.75),
+            rgb(0, 0, 0, 0.75)
+        );
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        filter: blur(100px);
+        z-index: -1;
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
     .container-dark {
         background: rgb(0, 0, 0, 0.5);
         padding: 1rem;
         min-width: 400px;
-        transition: 0.75s all linear;
         box-shadow: var(--dark-shadow);
     }
     h2 {
@@ -76,7 +117,12 @@
         <div class="header-left">
             <ProjectTechGrid {techUsed} />
         </div>
-        <img class="thumbnail" height="220" src={fypImages[0]} alt="fyp" />
+        <img
+            on:click={openCarousel}
+            class="thumbnail"
+            height="220"
+            src={fypImages[0]}
+            alt="fyp" />
     </header>
     <div>
         <p>
@@ -88,5 +134,12 @@
             the app will soon be available for other states.
         </p>
     </div>
-    <!-- <Carousel height="200" width="198" images={fypImages} />  -->
+    {#if carouselOpen}
+        <div
+            transition:fade
+            on:click={clickOutsideClose}
+            class="carousel-container">
+            <Carousel height="450" width="470" images={fypImages} />
+        </div>
+    {/if}
 </div>

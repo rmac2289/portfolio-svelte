@@ -1,13 +1,12 @@
 <script>
     import { fly } from "svelte/transition";
     let open = false;
-    function setOpen() {
+    function toggleNav() {
         open = !open;
     }
     import { links } from "svelte-routing";
     import { darkmode } from "../../store";
     let y;
-    console.dir(window);
 </script>
 
 <style>
@@ -60,7 +59,6 @@
         justify-content: center;
         align-items: center;
         cursor: pointer;
-        padding-left: 5px;
         z-index: 9999;
     }
     .open-button-text {
@@ -102,7 +100,7 @@
                 in:fly={{ delay: 500, y: -100, duration: 1000 }}
                 out:fly={{ duration: 1000, y: -100 }}
                 class={'open-button'}
-                on:mouseenter={setOpen}>
+                on:mouseenter={toggleNav}>
                 <p class="open-button-text">|||</p>
             </div>
         {/if}
@@ -112,42 +110,42 @@
             in:fly={{ delay: 700, y: -50 }}
             out:fly={{ y: -50 }}
             class={'close-button'}
-            on:click={setOpen}>
+            on:click={toggleNav}>
             <p class="close-button-text">X</p>
         </div>
     {/if}
     {#if open}
         <div class="nav">
             <div
-                on:click={setOpen}
+                on:click={toggleNav}
                 class={$darkmode ? 'link-div dark' : 'link-div'}
                 in:fly={{ duration: 1000, y: 100 }}
                 out:fly={{ duration: 1000, delay: 600, y: 700 }}>
                 <a href="/">home</a>
             </div>
             <div
-                on:click={setOpen}
+                on:click={toggleNav}
                 class={$darkmode ? 'link-div dark' : 'link-div'}
                 in:fly={{ duration: 1000, delay: 200, y: 100 }}
                 out:fly={{ duration: 1000, delay: 500, y: 600 }}>
                 <a href="/experience">experience</a>
             </div>
             <div
-                on:click={setOpen}
+                on:click={toggleNav}
                 class={$darkmode ? 'link-div dark' : 'link-div'}
                 in:fly={{ duration: 1000, delay: 300, y: 100 }}
                 out:fly={{ duration: 1000, delay: 400, y: 500 }}>
                 <a className="contact" href="/projects"> my work </a>
             </div>
             <div
-                on:click={setOpen}
+                on:click={toggleNav}
                 class={$darkmode ? 'link-div dark' : 'link-div'}
                 in:fly={{ duration: 1000, delay: 400, y: 100 }}
                 out:fly={{ duration: 1000, delay: 300, y: 400 }}>
                 <a href="/resume"> resume </a>
             </div>
             <div
-                on:click={setOpen}
+                on:click={toggleNav}
                 onclick="location.href='https://ross-scott-macdonald.medium.com'"
                 class={$darkmode ? 'link-div dark' : 'link-div'}
                 in:fly={{ duration: 1000, delay: 300, y: 100 }}
@@ -161,7 +159,7 @@
                 </a>
             </div>
             <div
-                on:click={setOpen}
+                on:click={toggleNav}
                 class={$darkmode ? 'link-div dark' : 'link-div'}
                 in:fly={{ duration: 1000, delay: 500, y: 100 }}
                 out:fly={{ duration: 1000, delay: 100, y: 200 }}>

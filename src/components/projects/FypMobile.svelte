@@ -3,7 +3,20 @@
     import { store, darkmode } from "../../store";
     let fypMobileImages = $store.fypMobile.images;
     let techUsed = $store.fypMobile.tech;
+    import { fade } from "svelte/transition";
+
     import ProjectTechGrid from "../utils/ProjectTechGrid.svelte";
+    let carouselOpen = false;
+    function openCarousel() {
+        carouselOpen = !carouselOpen;
+    }
+    function clickOutsideClose(e) {
+        console.dir(e.target);
+        if (carouselOpen && e.target.className.includes("carousel-container")) {
+            carouselOpen = !carouselOpen;
+        }
+        return;
+    }
 </script>
 
 <style>
@@ -13,6 +26,35 @@
         min-width: 400px;
         box-shadow: var(--main-shadow);
         transition: 0.75s all linear;
+    }
+    .carousel-container {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9998;
+    }
+    .carousel-container::before {
+        content: "";
+        position: absolute;
+        background-image: linear-gradient(
+            rgb(0, 0, 0, 0.75),
+            rgb(0, 0, 0, 0.75)
+        );
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        filter: blur(100px);
+        z-index: -1;
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
     .container-dark {
         background: rgb(0, 0, 0, 0.5);
@@ -76,7 +118,12 @@
         <div class="header-left">
             <ProjectTechGrid {techUsed} />
         </div>
-        <img class="thumbnail" width="125" src={fypMobileImages[0]} alt="fyp" />
+        <img
+            on:click={openCarousel}
+            class="thumbnail"
+            width="125"
+            src={fypMobileImages[0]}
+            alt="fyp" />
     </header>
     <div>
         <p>
@@ -87,5 +134,12 @@
             Store.
         </p>
     </div>
-    <!-- <Carousel height="400" width="185" images={fypMobileImages} /> -->
+    {#if carouselOpen}
+        <div
+            transition:fade
+            on:click={clickOutsideClose}
+            class="carousel-container">
+            <Carousel height="400" width="185" images={fypMobileImages} />
+        </div>
+    {/if}
 </div>

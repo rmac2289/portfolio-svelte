@@ -41,6 +41,7 @@
         display: grid;
         grid-template-columns: repeat(1fr 1fr);
         gap: 5px;
+        margin-bottom: 150px;
     }
     .icon-box {
         display: grid;

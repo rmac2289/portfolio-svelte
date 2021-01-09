@@ -1,9 +1,21 @@
 <script>
     import Carousel from "../utils/Carousel.svelte";
     import { store, darkmode } from "../../store";
+    import { fade } from "svelte/transition";
     let mealImages = $store.mealGenerator.images;
     let techUsed = $store.mealGenerator.tech;
     import ProjectTechGrid from "../utils/ProjectTechGrid.svelte";
+    let carouselOpen = false;
+    function openCarousel() {
+        carouselOpen = !carouselOpen;
+    }
+    function clickOutsideClose(e) {
+        console.dir(e.target);
+        if (carouselOpen && e.target.className.includes("carousel-container")) {
+            carouselOpen = !carouselOpen;
+        }
+        return;
+    }
 </script>
 
 <style>
@@ -13,6 +25,35 @@
         min-width: 400px;
         box-shadow: var(--main-shadow);
         transition: 0.75s all linear;
+    }
+    .carousel-container {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9998;
+    }
+    .carousel-container::before {
+        content: "";
+        position: absolute;
+        background-image: linear-gradient(
+            rgb(0, 0, 0, 0.75),
+            rgb(0, 0, 0, 0.75)
+        );
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        filter: blur(100px);
+        z-index: -1;
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
     .container-dark {
         background: rgb(0, 0, 0, 0.5);
@@ -77,6 +118,7 @@
             <ProjectTechGrid {techUsed} />
         </div>
         <img
+            on:click={openCarousel}
             class="thumbnail"
             height="200"
             width="165"
@@ -92,5 +134,12 @@
             recipes, automating a time-consuming task for your week.
         </p>
     </div>
-    <!-- <Carousel height="400" width="331" images={mealImages} /> -->
+    {#if carouselOpen}
+        <div
+            transition:fade
+            on:click={clickOutsideClose}
+            class="carousel-container">
+            <Carousel height="400" width="331" images={mealImages} />
+        </div>
+    {/if}
 </div>

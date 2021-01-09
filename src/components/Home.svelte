@@ -42,7 +42,6 @@
         border-bottom: 1px solid rgb(255, 255, 255, 0.5);
     }
     .page-box {
-        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -55,8 +54,24 @@
         transition: 0.75s all linear;
     }
     .dark {
-        background: rgb(0, 0, 0, 0.8);
         transition: 0.75s all linear;
+        background-color: rgb(0, 0, 0, 0.6);
+    }
+    .dark::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transition: 0.75s all linear;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: top;
+        background-image: url("/images/stars.jpg");
+        z-index: -1;
+        opacity: 0.5;
     }
     @media only screen and (min-width: 520px) {
         .sub-header {
