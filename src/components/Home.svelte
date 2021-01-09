@@ -1,9 +1,6 @@
 <script>
     import { fade, fly } from "svelte/transition";
-    import { readableStore, darkmode } from "../store";
-    const setDarkMode = () => {
-        darkmode.update((darkmode) => !darkmode);
-    };
+    import { store, darkmode } from "../store";
     import Switch from "./utils/Switch.svelte";
 </script>
 
@@ -55,7 +52,6 @@
         bottom: 0;
         right: 0;
         left: 0;
-        z-index: -1;
         transition: 0.75s all linear;
     }
     .dark {
@@ -79,7 +75,7 @@
         <h1>Ross MacDonald</h1>
         <div class="sub-header">
             <h2>
-                {#each $readableStore.subtitle as letter, i}
+                {#each $store.subtitle as letter, i}
                     <span
                         in:fade={{ delay: i * 100, duration: 1000 }}>{letter}</span>
                 {/each}

@@ -1,9 +1,8 @@
 <script>
     import Carousel from "../utils/Carousel.svelte";
-    import { readableStore } from "../../store";
-    let hearsayImages = $readableStore.hearsay.images;
-    import { fly } from "svelte/transition";
-    let techUsed = $readableStore.hearsay.tech;
+    import { store } from "../../store";
+    let hearsayImages = $store.hearsay.images;
+    let techUsed = $store.hearsay.tech;
     import ProjectTechGrid from "../utils/ProjectTechGrid.svelte";
 </script>
 
@@ -39,6 +38,7 @@
         width: 225px;
         padding: 0;
         box-shadow: var(--main-shadow);
+        z-index: 9997;
     }
     header {
         display: flex;

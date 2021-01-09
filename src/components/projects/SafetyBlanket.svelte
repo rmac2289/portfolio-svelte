@@ -1,9 +1,8 @@
 <script>
     import Carousel from "../utils/Carousel.svelte";
-    import { readableStore } from "../../store";
-    let safetyImages = $readableStore.safetyBlanket.images;
-    let techUsed = $readableStore.safetyBlanket.tech;
-    import { fly } from "svelte/transition";
+    import { store } from "../../store";
+    let safetyImages = $store.safetyBlanket.images;
+    let techUsed = $store.safetyBlanket.tech;
     import ProjectTechGrid from "../utils/ProjectTechGrid.svelte";
 </script>
 
@@ -38,6 +37,7 @@
     .thumbnail {
         padding: 0;
         box-shadow: var(--main-shadow);
+        z-index: 9997;
     }
     header {
         display: flex;

@@ -1,6 +1,6 @@
 import { readable, writable } from "svelte/store";
 
-export const readableStore = readable({
+export const store = readable({
   tech: [
     { name: "React", class: "fab fa-react", color: "#61dafb" },
     { name: "Node.js", class: "fab fa-node-js", color: "#68a063" },
@@ -21,6 +21,7 @@ export const readableStore = readable({
     { name: "Heroku", class: "", color: "", src: "images/heroku.png" },
     { name: "Netlify", class: "", color: "", src: "images/netlify.png" },
     { name: "Vercel", class: "", color: "", src: "images/vercel.png" },
+    { name: "Express", class: "", color: "", src: "images/expressjs.png" },
 
     {
       name: "postgres",
@@ -83,6 +84,7 @@ export const readableStore = readable({
           color: "",
           src: "images/elephant.png",
         },
+        { name: "Express", class: "", color: "", src: "images/expressjs.png" },
         { name: "Node.js", class: "fab fa-node-js", color: "#68a063" },
         { name: "Knex", class: "", color: "", src: "images/knex.png" },
       ],
@@ -113,6 +115,7 @@ export const readableStore = readable({
       backend: [
         { name: "Node.js", class: "fab fa-node-js", color: "#68a063" },
         { name: "Postgres", class: "", color: "", src: "images/elephant.png" },
+        { name: "Express", class: "", color: "", src: "images/expressjs.png" },
         { name: "Knex", class: "", color: "", src: "images/knex.png" },
       ],
       misc: [
@@ -141,6 +144,7 @@ export const readableStore = readable({
       backend: [
         { name: "Node.js", class: "fab fa-node-js", color: "#68a063" },
         { name: "Postgres", class: "", color: "", src: "images/elephant.png" },
+        { name: "Express", class: "", color: "", src: "images/expressjs.png" },
         { name: "Knex", class: "", color: "", src: "images/knex.png" },
       ],
       misc: [

@@ -1,9 +1,9 @@
 <script>
     import Carousel from "../utils/Carousel.svelte";
-    import { readableStore } from "../../store";
-    let portfolioImages = $readableStore.portfolio.images;
+    import { store } from "../../store";
+    let portfolioImages = $store.portfolio.images;
     import { fly } from "svelte/transition";
-    let techUsed = $readableStore.portfolio.tech;
+    let techUsed = $store.portfolio.tech;
     let svelte = "images/svelte.png";
     import ProjectTechGrid from "../utils/ProjectTechGrid.svelte";
 </script>
@@ -40,6 +40,7 @@
         width: 225px;
         padding: 0;
         box-shadow: var(--main-shadow);
+        z-index: 9997;
     }
     header {
         display: flex;

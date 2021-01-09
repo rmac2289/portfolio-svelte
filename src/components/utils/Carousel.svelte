@@ -13,7 +13,7 @@
             : (currentIdx = (currentIdx - 1) % images.length);
     };
 
-    import { blur, fade } from "svelte/transition";
+    import { blur } from "svelte/transition";
 </script>
 
 <style>

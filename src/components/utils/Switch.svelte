@@ -5,13 +5,12 @@
 <style>
     .switch {
         position: fixed;
-        right: 5px;
-        top: 50%;
-        margin-top: -17px;
+        bottom: 10px;
+        left: 50%;
+        margin-left: -30px;
         display: inline-block;
         width: 60px;
         height: 34px;
-        transform: rotate(90deg);
     }
 
     .switch input {

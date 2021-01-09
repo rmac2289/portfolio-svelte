@@ -1,5 +1,5 @@
 <script>
-    import { fly, fade } from "svelte/transition";
+    import { fly } from "svelte/transition";
     let open = false;
     function setOpen() {
         open = !open;
@@ -16,7 +16,7 @@
         grid-template-columns: 1fr;
         height: 100vh;
         position: fixed;
-        z-index: 9999;
+        z-index: 9998;
         top: 0;
         right: 0;
         left: 0;
@@ -61,6 +61,7 @@
         align-items: center;
         cursor: pointer;
         padding-left: 5px;
+        z-index: 9999;
     }
     .open-button-text {
         color: white;
@@ -73,6 +74,7 @@
         right: 7px;
         height: 50px;
         width: 50px;
+        z-index: 9999;
         background: white;
         z-index: 9999;
         display: flex;

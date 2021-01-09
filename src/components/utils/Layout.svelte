@@ -1,12 +1,8 @@
 <script>
     import CornerLogo from "./CornerLogo.svelte";
     import { fade, fly } from "svelte/transition";
-    import { cubicInOut, elasticInOut, quadInOut } from "svelte/easing";
-    import { darkmode } from "../../store";
-    const setDarkMode = () => {
-        darkmode.update((darkmode) => !darkmode);
-    };
     import Switch from "./Switch.svelte";
+    import { darkmode } from "../../store";
 </script>
 
 <style>
@@ -51,10 +47,9 @@
     <div class="container">
         <CornerLogo />
         <div
-            in:fly={{ duration: 1500, y: 750, delay: 600 }}
+            in:fly={{ duration: 1500, y: 500, delay: 600 }}
             out:fade={{ duration: 1 }}>
             <slot />
         </div>
     </div>
-    <Switch bind:checked={$darkmode} />
 </div>

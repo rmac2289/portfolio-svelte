@@ -1,9 +1,9 @@
 <script>
     import Carousel from "../utils/Carousel.svelte";
-    import { readableStore } from "../../store";
-    let mealImages = $readableStore.mealGenerator.images;
+    import { store } from "../../store";
+    let mealImages = $store.mealGenerator.images;
     import { fly } from "svelte/transition";
-    let techUsed = $readableStore.mealGenerator.tech;
+    let techUsed = $store.mealGenerator.tech;
     import ProjectTechGrid from "../utils/ProjectTechGrid.svelte";
 </script>
 
@@ -38,6 +38,7 @@
     .thumbnail {
         padding: 0;
         box-shadow: var(--main-shadow);
+        z-index: 9997;
     }
     header {
         display: flex;

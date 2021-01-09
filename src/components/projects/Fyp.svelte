@@ -1,10 +1,8 @@
 <script>
     import Carousel from "../utils/Carousel.svelte";
-    import { readableStore } from "../../store";
-    let fypImages = $readableStore.fyp.images;
-    let techUsed = $readableStore.fyp.tech;
-    import { fly } from "svelte/transition";
-    console.log(techUsed);
+    import { store } from "../../store";
+    let fypImages = $store.fyp.images;
+    let techUsed = $store.fyp.tech;
     import ProjectTechGrid from "../utils/ProjectTechGrid.svelte";
 </script>
 
@@ -39,6 +37,7 @@
     .thumbnail {
         padding: 0;
         box-shadow: var(--main-shadow);
+        z-index: 9997;
     }
     header {
         display: flex;
