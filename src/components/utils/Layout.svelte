@@ -52,4 +52,5 @@
             <slot />
         </div>
     </div>
+    <Switch bind:checked={$darkmode} />
 </div>

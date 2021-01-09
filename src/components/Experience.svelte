@@ -1,6 +1,6 @@
 <script>
     import Layout from "./utils/Layout.svelte";
-    import { store } from "../store";
+    import { store, darkmode } from "../store";
     import { fly } from "svelte/transition";
     let y;
 </script>
@@ -50,7 +50,12 @@
         padding-right: 1rem;
         border-radius: 1px;
         background: rgb(0, 0, 0, 0.5);
-        transition: 0.5s all ease-in;
+        box-shadow: var(--main-shadow);
+        transition: 0.75s all linear;
+        border: 1px solid transparent;
+    }
+    .icon-box-dark {
+        box-shadow: var(--dark-shadow);
     }
     .icon-box:hover {
         background: rgb(0, 0, 0, 0.75);
@@ -116,7 +121,7 @@
         <h1 in:fly={{ y: 1000, duration: 750 }} class="header">Tech</h1>
         <div in:fly={{ y: 1000, duration: 750 }} class="tech-grid">
             {#each $store.tech as tech}
-                <div class="icon-box">
+                <div class={$darkmode ? 'icon-box icon-box-dark' : 'icon-box'}>
                     {#if tech.class[0] === 'f'}
                         <i class={tech.class} style="color:{tech.color}" />
                     {/if}

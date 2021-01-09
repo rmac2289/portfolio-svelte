@@ -89,6 +89,7 @@
         background: rgb(255, 255, 255, 0.3);
         border: none;
         color: white;
+        box-shadow: var(--main-shadow);
     }
     input:focus,
     textarea:focus {
@@ -104,6 +105,7 @@
         transition: 0.5s all linear;
         cursor: pointer;
         min-width: 100px;
+        box-shadow: var(--main-shadow);
     }
     button:hover {
         background: rgb(255, 255, 255, 0.7);

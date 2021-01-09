@@ -26,31 +26,32 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: rgba(255, 255, 255, 0.4);
-        -webkit-transition: 0.4s;
+        border-left: 1px solid rgba(255, 255, 255, 0.4);
+        border-right: 1px solid rgba(255, 255, 255, 0.4);
+
         transition: 0.4s;
-        border-radius: 24px;
     }
 
     .slider:before {
         position: absolute;
         content: "";
-        height: 26px;
-        width: 26px;
+        height: 20px;
+        width: 20px;
         left: 4px;
-        bottom: 4px;
+        bottom: 50%;
+        margin-bottom: -10px;
         background-color: rgb(6, 16, 6);
-        border-radius: 50%;
-        -webkit-transition: 0.4s;
+        border: 1px solid rgba(255, 255, 255, 0.4);
         transition: 0.4s;
     }
 
     input:checked + .slider {
-        background-color: rgba(255, 255, 255, 0.4);
+        background-color: rgba(255, 255, 255, 0.3);
+        border: none;
     }
 
     input:checked + .slider:before {
-        transform: translateX(26px);
+        transform: translateX(32px);
     }
 </style>
 

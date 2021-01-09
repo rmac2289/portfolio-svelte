@@ -1,8 +1,7 @@
 <script>
     import Carousel from "../utils/Carousel.svelte";
-    import { store } from "../../store";
+    import { store, darkmode } from "../../store";
     let portfolioImages = $store.portfolio.images;
-    import { fly } from "svelte/transition";
     let techUsed = $store.portfolio.tech;
     let svelte = "images/svelte.png";
     import ProjectTechGrid from "../utils/ProjectTechGrid.svelte";
@@ -14,6 +13,14 @@
         padding: 1rem;
         min-width: 400px;
         box-shadow: var(--main-shadow);
+        transition: 0.75s all linear;
+    }
+    .container-dark {
+        background: rgb(0, 0, 0, 0.5);
+        padding: 1rem;
+        min-width: 400px;
+        transition: 0.75s all linear;
+        box-shadow: var(--dark-shadow);
     }
     h2 {
         color: rgba(255, 255, 255, 0.95);
@@ -68,7 +75,7 @@
     }
 </style>
 
-<div class="container">
+<div class={$darkmode ? 'container-dark' : 'container'}>
     <header>
         <div class="title">
             <h2>This site!</h2>
