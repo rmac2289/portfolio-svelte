@@ -3,7 +3,6 @@
     import { fade, fly } from "svelte/transition";
     import Switch from "./Switch.svelte";
     import { darkmode } from "../../store";
-    let stars = "images/stars.jpg";
 </script>
 
 <style>
@@ -46,6 +45,12 @@
         height: 100%;
         transition: 0.75s all linear;
     }
+    .switch-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 20px;
+    }
     @media only screen and (min-width: 520px) {
         .container {
             width: 85%;
@@ -74,5 +79,7 @@
             <slot />
         </div>
     </div>
-    <Switch bind:checked={$darkmode} />
+    <div class="switch-box">
+        <Switch bind:checked={$darkmode} />
+    </div>
 </div>

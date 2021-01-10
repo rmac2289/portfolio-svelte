@@ -4,13 +4,10 @@
 
 <style>
     .switch {
-        position: fixed;
-        bottom: 10px;
-        left: 50%;
-        margin-left: -37px;
         display: inline-block;
         width: 74px;
         height: 34px;
+        position: relative;
     }
 
     .switch input {
@@ -27,55 +24,65 @@
         right: 0;
         bottom: 0;
         transition: 0.4s;
-        border-bottom: 1px solid rgb(255, 255, 255, 0.2);
-        border-top: 1px solid rgb(255, 255, 255, 0.2);
     }
-
-    .slider:before {
-        position: absolute;
-        content: "";
-        width: 18px;
-        height: 18px;
-        border-radius: 20%;
-        left: 12px;
-        top: 5px;
-        bottom: 4px;
-        background-color: rgba(255, 255, 255, 0.6);
+    #arrow {
+        color: rgb(255, 255, 255, 0.8);
         transition: 0.4s;
+        font-size: 18px;
     }
-    .fa-moon,
-    .fa-sun {
+    .icon-box-left,
+    .icon-box-right {
         position: absolute;
         bottom: 0;
-        font-size: 16px;
+        top: 0;
         transition: 0.4s all linear;
         cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .icon-box-left {
+        left: -10px;
+    }
+    .icon-box-right {
+        right: -10px;
     }
     .fa-moon {
-        right: -10px;
-        top: 8px;
+        font-size: 18px;
         color: rgb(255, 255, 255, 0.4);
     }
     .fa-sun {
-        left: -10px;
-        top: 8px;
+        color: rgb(255, 255, 255, 0.8);
+        font-size: 18px;
+    }
+    .arrow-box {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        content: "";
+        left: 12px;
+        top: 0;
+        bottom: 0;
+        transition: 0.4s;
+    }
+    input:checked + .slider + .icon-box-left + .icon-box-right .fa-moon {
         color: rgb(255, 255, 255, 0.8);
     }
-    input:checked + .slider + .fa-sun + .fa-moon {
-        color: rgb(255, 255, 255, 0.8);
-    }
-    input:checked + .slider + .fa-sun {
+    input:checked + .slider + .icon-box-left .fa-sun {
         color: rgb(255, 255, 255, 0.4);
     }
 
-    input:checked + .slider:before {
-        transform: translateX(36px);
+    input:checked + .slider #arrow {
+        transform: translateX(42px) rotate(540deg);
     }
 </style>
 
 <label class="switch">
     <input type="checkbox" bind:checked />
-    <span class="slider" />
-    <i class="fas fa-sun" />
-    <i class="fas fa-moon" />
+    <div class="slider">
+        <div class="arrow-box"><i class="fas fa-caret-left" id="arrow" /></div>
+    </div>
+    <div class="icon-box-left"><i class="fas fa-sun" /></div>
+    <div class="icon-box-right"><i class="fas fa-moon" /></div>
 </label>

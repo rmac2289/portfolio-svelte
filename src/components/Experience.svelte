@@ -2,6 +2,9 @@
     import Layout from "./utils/Layout.svelte";
     import { store, darkmode } from "../store";
     import { fly } from "svelte/transition";
+    import { onMount } from "svelte";
+    import { Image } from "@cloudinary/svelte";
+    import { cloud_name } from "../../config";
     let y;
 </script>
 
@@ -31,17 +34,13 @@
         height: 100%;
         width: 100%;
     }
-    img {
-        height: 30px;
-        width: 30px;
-    }
     .tech-grid {
         padding: 1rem;
         border-left: 1px solid rgb(255, 255, 255, 0.5);
         display: grid;
         grid-template-columns: repeat(1fr 1fr);
         gap: 5px;
-        margin-bottom: 150px;
+        margin-bottom: 25px;
     }
     .icon-box {
         display: grid;
@@ -61,6 +60,10 @@
     .icon-box:hover {
         background: rgb(0, 0, 0, 0.75);
         transform: scale(1.1);
+    }
+    .img {
+        height: 30px;
+        width: 30px;
     }
     .name {
         display: flex;
@@ -84,19 +87,6 @@
             grid-template-columns: repeat(4, 1fr);
             gap: 8px;
         }
-        i {
-            font-size: 2.5rem;
-            padding-right: 1rem;
-        }
-        img {
-            padding-right: 1rem;
-            width: 40px;
-            height: 40px;
-        }
-        .mongodb {
-            width: 20px;
-            height: 40px;
-        }
     }
 </style>
 
@@ -118,19 +108,19 @@
         <br />
         {$store.experience4}
     </p>
-    {#if y > 100}
+    {#if y > 50}
         <h1 in:fly={{ y: 1000, duration: 750 }} class="header">Tech</h1>
         <div in:fly={{ y: 1000, duration: 750 }} class="tech-grid">
             {#each $store.tech as tech}
                 <div class={$darkmode ? 'icon-box icon-box-dark' : 'icon-box'}>
-                    {#if tech.class[0] === 'f'}
+                    {#if tech.class}
                         <i class={tech.class} style="color:{tech.color}" />
-                    {/if}
-                    {#if tech.class === '' && tech.name !== 'mongoDB'}
-                        <img src={tech.src} alt={tech.name} />
-                    {/if}
-                    {#if tech.name === 'mongoDB'}
-                        <img class="mongodb" src={tech.src} alt="mongodb" />
+                    {:else}
+                        <Image
+                            {cloud_name}
+                            public_id={tech.public_id}
+                            alt={tech.name}
+                            height="30" />
                     {/if}
                     <div class="name">
                         <div id="name">{tech.name}</div>

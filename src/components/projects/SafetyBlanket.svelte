@@ -93,7 +93,7 @@
             on:click={openCarousel}
             class="thumbnail"
             width="150"
-            src={safetyImages[0]}
+            src="images/safetyhome.PNG"
             alt="fyp" />
     </header>
     <div>
@@ -112,7 +112,6 @@
             on:click={clickOutsideClose}
             class="carousel-container">
             <Carousel height="533" width="300" images={safetyImages} />
-            <button on:click={() => (carouselOpen = false)}>X</button>
         </div>
     {/if}
 </div>

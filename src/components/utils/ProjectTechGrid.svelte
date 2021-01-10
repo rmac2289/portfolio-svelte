@@ -1,5 +1,7 @@
 <script>
     export let techUsed;
+    import { Image } from "@cloudinary/svelte";
+    import { cloud_name } from "../../../config";
 </script>
 
 <style>
@@ -67,8 +69,13 @@
         {#each techUsed.frontend as tech}
             <div class="grid-item">
                 <p>{tech.name}</p>
-                {#if tech.src}
-                    <img src={tech.src} alt={tech.name} />
+                {#if tech.public_id}
+                    <Image
+                        {cloud_name}
+                        width="30"
+                        height="30"
+                        public_id={tech.public_id}
+                        alt={tech.name} />
                 {:else}<i style="color: {tech.color}" class={tech.class} />{/if}
             </div>
         {/each}
@@ -79,8 +86,13 @@
             {#each techUsed.backend as tech}
                 <div class="grid-item">
                     <p>{tech.name}</p>
-                    {#if tech.src}
-                        <img src={tech.src} alt={tech.name} />
+                    {#if tech.public_id}
+                        <Image
+                            {cloud_name}
+                            public_id={tech.public_id}
+                            height="30"
+                            width="30"
+                            alt={tech.name} />
                     {:else}
                         <i style="color: {tech.color}" class={tech.class} />
                     {/if}
@@ -94,8 +106,13 @@
         {#each techUsed.misc as tech}
             <div class="grid-item">
                 <p>{tech.name}</p>
-                {#if tech.src}
-                    <img src={tech.src} alt={tech.name} />
+                {#if tech.public_id}
+                    <Image
+                        {cloud_name}
+                        public_id={tech.public_id}
+                        height="30"
+                        width="30"
+                        alt={tech.name} />
                 {:else}<i style="color: {tech.color}" class={tech.class} />{/if}
             </div>
         {/each}

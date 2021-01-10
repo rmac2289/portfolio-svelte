@@ -3,6 +3,8 @@
     export let height;
     export let width;
     import { flip } from "svelte/animate";
+    import { Image } from "@cloudinary/svelte";
+    import { cloud_name } from "../../../config";
     let currentIdx = 0;
     const next = () => {
         currentIdx = (currentIdx + 1) % images.length;
@@ -58,11 +60,12 @@
         class="container"
         style={`height:${height}px; width:${width}px;`}>
         <div transition:blur={{ duration: 600 }} class="controls" />
-        <img
-            height={`${height}`}
-            width={`${width}`}
-            src={photo}
-            alt="carousel" />
+        <Image
+            {cloud_name}
+            public_id={photo.public_id}
+            alt={photo.public_id}
+            {height}
+            {width} />
     </div>
 {/each}
 <div on:click={prev} class="next"><i class="fas fa-chevron-right" /></div>

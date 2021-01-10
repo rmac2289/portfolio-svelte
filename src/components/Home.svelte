@@ -73,6 +73,15 @@
         z-index: -1;
         opacity: 0.5;
     }
+    .switch-box {
+        position: fixed;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     @media only screen and (min-width: 520px) {
         .sub-header {
             padding-top: 10px;
@@ -97,5 +106,7 @@
             </h2>
         </div>
     </div>
-    <Switch bind:checked={$darkmode} />
+    <div class="switch-box">
+        <Switch bind:checked={$darkmode} />
+    </div>
 </div>

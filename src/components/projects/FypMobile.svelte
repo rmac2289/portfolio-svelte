@@ -91,8 +91,8 @@
         <img
             on:click={openCarousel}
             class="thumbnail"
-            width="125"
-            src={fypMobileImages[0]}
+            width="140"
+            src="images/fypMobileHome.png"
             alt="fyp" />
     </header>
     <div>
@@ -109,7 +109,7 @@
             transition:fade
             on:click={clickOutsideClose}
             class="carousel-container">
-            <Carousel height="400" width="185" images={fypMobileImages} />
+            <Carousel height="540" width="250" images={fypMobileImages} />
         </div>
     {/if}
 </div>
