@@ -49,7 +49,7 @@
         width: 25px;
         font-size: 22px;
     }
-    @media only screen and (min-width: 600px) {
+    @media only screen and (min-width: 720px) {
         .tech-grid {
             grid-template-columns: 1fr 1fr;
         }

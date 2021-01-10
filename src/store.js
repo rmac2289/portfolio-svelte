@@ -120,6 +120,8 @@ export const store = readable({
       ],
       misc: [
         { name: "npm", class: "fab fa-npm", color: "rgb(181,52,54)" },
+        { name: "Heroku", class: "", color: "", src: "images/heroku.png" },
+
         { name: "Vercel", class: "", color: "", src: "images/vercel.png" },
         { name: "git", class: "fab fa-git-alt", color: "#f05030" },
         { name: "GitHub", class: "fab fa-github", color: "rgb(210,105,35)" },
@@ -282,3 +284,10 @@ export const store = readable({
 });
 
 export const darkmode = writable(false);
+
+export const clickOutsideClose = (e, carouselOpen) => {
+  if (carouselOpen && e.target.className.includes("carousel-container")) {
+    carouselOpen = !carouselOpen;
+  }
+  return;
+};

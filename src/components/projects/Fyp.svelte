@@ -10,7 +10,6 @@
         carouselOpen = !carouselOpen;
     }
     function clickOutsideClose(e) {
-        console.dir(e.target);
         if (carouselOpen && e.target.className.includes("carousel-container")) {
             carouselOpen = !carouselOpen;
         }
@@ -25,36 +24,6 @@
         min-width: 400px;
         box-shadow: var(--main-shadow);
         transition: 0.75s all linear;
-    }
-    .carousel-container {
-        position: fixed;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 9998;
-        transition: 0.75s all linear;
-    }
-    .carousel-container::before {
-        content: "";
-        position: absolute;
-        background-image: linear-gradient(
-            rgb(0, 0, 0, 0.75),
-            rgb(0, 0, 0, 0.75)
-        );
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        filter: blur(100px);
-        z-index: -1;
-        height: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
     }
     .container-dark {
         background: rgb(0, 0, 0, 0.5);
@@ -87,10 +56,15 @@
         padding: 0;
         box-shadow: var(--main-shadow);
         z-index: 9997;
+        margin: 25px;
+        width: 300px;
+        height: 300px;
     }
     header {
         display: flex;
         align-items: center;
+        justify-content: center;
+        flex-direction: column;
         background: rgba(255, 255, 255, 0.25);
         box-shadow: var(--main-shadow);
         padding: 0.5rem;
@@ -107,6 +81,19 @@
         color: rgba(255, 255, 255, 0.95);
         font-size: 1.25em;
     }
+    @media only screen and (min-width: 720px) {
+        header {
+            flex-direction: row;
+            justify-content: initial;
+        }
+        .thumbnail {
+            margin: initial;
+            width: 250px;
+            height: 250px;
+        }
+    }
+    @media only screen and (min-width: 900px) {
+    }
 </style>
 
 <div class={$darkmode ? 'container-dark' : 'container'}>
@@ -120,7 +107,6 @@
         <img
             on:click={openCarousel}
             class="thumbnail"
-            height="220"
             src={fypImages[0]}
             alt="fyp" />
     </header>

@@ -10,7 +10,6 @@
         carouselOpen = !carouselOpen;
     }
     function clickOutsideClose(e) {
-        console.dir(e.target);
         if (carouselOpen && e.target.className.includes("carousel-container")) {
             carouselOpen = !carouselOpen;
         }
@@ -26,35 +25,7 @@
         box-shadow: var(--main-shadow);
         transition: 0.75s all linear;
     }
-    .carousel-container {
-        position: fixed;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 9998;
-    }
-    .carousel-container::before {
-        content: "";
-        position: absolute;
-        background-image: linear-gradient(
-            rgb(0, 0, 0, 0.75),
-            rgb(0, 0, 0, 0.75)
-        );
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        filter: blur(100px);
-        z-index: -1;
-        height: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
+
     .container-dark {
         background: rgb(0, 0, 0, 0.5);
         padding: 1rem;
