@@ -192,7 +192,7 @@ export const store = readable({
       { public_id: "hearsayAgencies" },
       { public_id: "hearsayRegister" },
       { public_id: "hearsayLogin" },
-      { public_id: "hearsayReviews" },
+      { public_id: "hearsayReview" },
       { public_id: "hearsayDiscussion" },
     ],
   },
@@ -351,7 +351,7 @@ export const store = readable({
         },
       ],
     },
-    images: { public_id: "portfolioHome" },
+    images: [{ public_id: "portfoliohome" }],
   },
   experience1: `As a developer I feel most at home writing full-stack web apps with 
     JavaScript. Though true, that's a wild oversimplification; I've worked with 

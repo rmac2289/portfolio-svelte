@@ -6,6 +6,7 @@
     let techUsed = $store.portfolio.tech;
     import ProjectTechGrid from "../utils/ProjectTechGrid.svelte";
     let carouselOpen = false;
+    console.log(portfolioImages);
     function openCarousel() {
         carouselOpen = !carouselOpen;
     }
