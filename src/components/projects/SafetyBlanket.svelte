@@ -122,7 +122,7 @@
             on:click={openCarousel}
             class="thumbnail"
             width="150"
-            src="images/safetyblanket/safetyhome.PNG"
+            src={safetyImages[0]}
             alt="fyp" />
     </header>
     <div>

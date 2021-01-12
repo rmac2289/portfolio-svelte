@@ -130,7 +130,7 @@
         <img
             on:click={openCarousel}
             class="thumbnail"
-            src="images/portfoliohome.png"
+            src={portfolioImages[0]}
             alt="portfolio" />
     </header>
     <div>

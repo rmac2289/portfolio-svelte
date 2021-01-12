@@ -60,7 +60,7 @@ export const store = readable({
       ],
     },
     images: [
-      { src: "images/safetyblanket/safetyhome.png" },
+      { src: "images/safetyblanket/safetyHome.png" },
       { src: "images/safetyblanket/safetyHomeBottom.png" },
       { src: "images/safetyblanket/safetyCall.png" },
       { src: "images/safetyblanket/safetyStateList.png" },
