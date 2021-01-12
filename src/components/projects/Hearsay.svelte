@@ -136,7 +136,7 @@
         <img
             on:click={openCarousel}
             class="thumbnail"
-            src={hearsayImages[0]}
+            src="images/hearsay/hearsay.png"
             alt="hearsay" />
     </header>
     <div>

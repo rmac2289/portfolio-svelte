@@ -122,7 +122,7 @@
             on:click={openCarousel}
             class="thumbnail"
             width="140"
-            src={fypMobileImages[0]}
+            src="images/fypmobile/fypMobileHome.png"
             alt="fyp" />
     </header>
     <div>

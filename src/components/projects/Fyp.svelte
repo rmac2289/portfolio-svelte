@@ -131,7 +131,7 @@
         <img
             on:click={openCarousel}
             class="thumbnail"
-            src={fypImages[0]}
+            src="images/fyp/fypHome.jpg"
             alt="fyp" />
     </header>
     <div>

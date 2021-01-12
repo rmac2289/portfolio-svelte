@@ -124,7 +124,7 @@
             class="thumbnail"
             height="200"
             width="165"
-            src={mealImages[0]}
+            src="images/mealgenerator/meal.png"
             alt="meal" />
     </header>
     <div>
