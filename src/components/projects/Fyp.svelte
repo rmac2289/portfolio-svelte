@@ -149,7 +149,7 @@
             transition:fade
             on:click={clickOutsideClose}
             class="carousel-container">
-            <Carousel height="450" width="470" images={fypImages} />
+            <Carousel projectClass="fyp" images={fypImages} />
         </div>
     {/if}
 </div>

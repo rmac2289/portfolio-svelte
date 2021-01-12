@@ -253,11 +253,11 @@ export const store = readable({
     },
     images: [
       { src: "images/fyp/fypHome.jpg" },
-      { src: "images/fyp/fypPark.png" },
-      { src: "images/fyp/fypList.png" },
-      { src: "images/fyp/fypSignup.png" },
-      { src: "images/fyp/fypLogin.png" },
-      { src: "images/fyp/fypComments.png" },
+      { src: "images/fyp/fypPark.jpg" },
+      { src: "images/fyp/fypList.jpg" },
+      { src: "images/fyp/fypSignup.jpg" },
+      { src: "images/fyp/fypLogin.jpg" },
+      { src: "images/fyp/fypComments.jpg" },
     ],
   },
   mealGenerator: {

@@ -145,7 +145,7 @@
             transition:fade
             on:click={clickOutsideClose}
             class="carousel-container">
-            <Carousel width="600" images={portfolioImages} />
+            <Carousel projectClass="portfolio" images={portfolioImages} />
         </div>
     {/if}
 </div>

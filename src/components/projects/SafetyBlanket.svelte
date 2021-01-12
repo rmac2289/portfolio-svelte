@@ -140,7 +140,7 @@
             transition:fade
             on:click={clickOutsideClose}
             class="carousel-container">
-            <Carousel height="533" width="300" images={safetyImages} />
+            <Carousel projectClass="safety-blanket" images={safetyImages} />
         </div>
     {/if}
 </div>
