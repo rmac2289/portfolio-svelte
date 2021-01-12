@@ -15,7 +15,7 @@
         border-left: 1px solid rgb(255, 255, 255, 0.5);
     }
     h2 {
-        font-size: 2em;
+        font-size: 1.5em;
         color: white;
         font-weight: 100;
         overflow: hidden;
@@ -33,7 +33,7 @@
         min-height: 50px;
         margin: 0;
         padding: 20px 0 0 0;
-        font-size: 4em;
+        font-size: 3em;
         font-weight: 100;
         display: flex;
         align-items: center;
@@ -85,6 +85,12 @@
     @media only screen and (min-width: 520px) {
         .sub-header {
             padding-top: 10px;
+        }
+        h1 {
+            font-size: 4em;
+        }
+        h2 {
+            font-size: 2em;
         }
     }
 </style>

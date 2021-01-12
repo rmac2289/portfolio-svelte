@@ -7,12 +7,12 @@
 
 <style>
     .container {
-        width: 95%;
         height: 100%;
+        width: 100%;
         margin-bottom: 100px;
         margin-left: auto;
         margin-right: auto;
-        padding: 1rem;
+
         transition: 0.75s all linear;
     }
     .dark {
@@ -38,11 +38,11 @@
         opacity: 0.5;
     }
     .slot-container {
-        margin-top: 150px;
+        padding-top: 150px;
     }
     .page {
-        width: 100%;
         height: 100%;
+        width: 100%;
         transition: 0.75s all linear;
     }
     .switch-box {

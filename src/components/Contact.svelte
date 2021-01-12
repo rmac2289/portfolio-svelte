@@ -55,6 +55,7 @@
     .header {
         color: white;
         width: 100%;
+        padding-left: 1rem;
         margin-left: auto;
         margin-right: auto;
         max-width: 650px;
@@ -62,10 +63,10 @@
     .content {
         border-left: 1px solid rgb(255, 255, 255, 0.5);
         padding: 1rem;
-        width: 100%;
-        max-width: 650px;
         margin-left: auto;
         margin-right: auto;
+        max-width: 650px;
+        margin-bottom: 0;
     }
     form {
         color: white;

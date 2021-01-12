@@ -60,12 +60,7 @@
         class="container"
         style={`height:${height}px; width:${width}px;`}>
         <div transition:blur={{ duration: 600 }} class="controls" />
-        <Image
-            {cloud_name}
-            public_id={photo.public_id}
-            alt={photo.public_id}
-            {height}
-            {width} />
+        <img src={photo.src} alt={photo.name} {height} {width} />
     </div>
 {/each}
 <div on:click={prev} class="next"><i class="fas fa-chevron-right" /></div>

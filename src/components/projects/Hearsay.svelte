@@ -21,14 +21,23 @@
     .container {
         background: rgb(0, 0, 0, 0.5);
         padding: 1rem;
-        min-width: 400px;
         box-shadow: var(--main-shadow);
         transition: 0.75s all linear;
+    }
+    .image-icon {
+        width: 25%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        cursor: pointer;
+    }
+    i {
+        color: rgba(255, 255, 255, 0.95);
+        font-size: 28px;
     }
     .container-dark {
         background: rgb(0, 0, 0, 0.5);
         padding: 1rem;
-        min-width: 400px;
         transition: 0.75s all linear;
         box-shadow: var(--dark-shadow);
     }
@@ -37,6 +46,8 @@
         text-align: center;
         font-weight: 900;
         margin: 0;
+        width: 75%;
+        text-align: left;
         font-family: "Lato", sans-serif;
     }
     .title {
@@ -48,17 +59,19 @@
         height: 50px;
         background: rgb(0, 0, 0, 0.35);
         display: flex;
-        justify-content: flex-start;
         padding-left: 1.5rem;
+        padding-right: 1.5rem;
         align-items: center;
         box-shadow: var(--main-shadow);
     }
     .thumbnail {
+        display: none;
         width: 300px;
         padding: 0;
         margin: 25px;
         box-shadow: var(--main-shadow);
         z-index: 9997;
+        cursor: pointer;
     }
     header {
         display: flex;
@@ -71,24 +84,35 @@
         position: relative;
     }
     .header-left {
-        width: 85%;
+        width: 95%;
         margin-left: auto;
         margin-right: auto;
-        margin: 0;
-        margin-right: 0.5rem;
     }
     p {
         color: rgba(255, 255, 255, 0.95);
         font-size: 1.25em;
     }
     @media only screen and (min-width: 720px) {
-        .thumbnail {
-            width: 250px;
-            margin: initial;
-        }
         header {
             flex-direction: row;
             justify-content: initial;
+        }
+        .container,
+        .container-dark {
+            min-width: 400px;
+        }
+    }
+    @media only screen and (min-width: 900px) {
+        .thumbnail {
+            display: initial;
+            width: 250px;
+            margin: initial;
+        }
+        .header-left {
+            width: 85%;
+        }
+        i {
+            display: none;
         }
     }
     @media only screen and (min-width: 1024px) {
@@ -102,6 +126,9 @@
     <header>
         <div class="title">
             <h2>Hearsay</h2>
+            <div on:click={openCarousel} class="image-icon">
+                <i class="fas fa-photo-video" />
+            </div>
         </div>
         <div class="header-left">
             <ProjectTechGrid {techUsed} />
@@ -109,7 +136,7 @@
         <img
             on:click={openCarousel}
             class="thumbnail"
-            src="images/hearsay.png"
+            src="images/hearsay/hearsay.png"
             alt="hearsay" />
     </header>
     <div>

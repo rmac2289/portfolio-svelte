@@ -59,7 +59,7 @@
     }
     .icon-box:hover {
         background: rgb(0, 0, 0, 0.75);
-        transform: scale(1.1);
+        transform: scale(1.075);
     }
     .img {
         height: 30px;
@@ -116,11 +116,7 @@
                     {#if tech.class}
                         <i class={tech.class} style="color:{tech.color}" />
                     {:else}
-                        <Image
-                            {cloud_name}
-                            public_id={tech.public_id}
-                            alt={tech.name}
-                            height="30" />
+                        <img src={tech.src} alt={tech.name} height="30" />
                     {/if}
                     <div class="name">
                         <div id="name">{tech.name}</div>

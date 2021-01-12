@@ -6,19 +6,16 @@
     import Fyp from "./projects/Fyp.svelte";
     import Portfolio from "./projects/Portfolio.svelte";
     import MealGenerator from "./projects/MealGenerator.svelte";
-    import { Image } from "@cloudinary/svelte";
-    import { cloud_name } from "../../config";
     import { fly } from "svelte/transition";
 </script>
 
 <style>
-    .header {
-        color: white;
-    }
     .grid {
         display: grid;
         grid-template-columns: 1fr;
         gap: 30px;
+        width: 95%;
+        padding: 10px;
     }
 </style>
 
@@ -26,7 +23,6 @@
     <title>Projects</title>
 </svelte:head>
 <Layout>
-    <h1 class="header">Projects</h1>
     <div class="grid" transition:fly={{ duration: 1000, y: 500 }}>
         <SafetyBlanket />
         <Fyp />
