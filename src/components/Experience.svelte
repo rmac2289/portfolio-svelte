@@ -3,7 +3,6 @@
   import { store, darkmode } from "../store";
   import { fly } from "svelte/transition";
   let y;
-  console.log(window.innerWidth);
 </script>
 
 <svelte:window bind:scrollY={y} />
