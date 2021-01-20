@@ -2,6 +2,8 @@
   export let images = [];
   export let projectClass;
   import { flip } from "svelte/animate";
+  import { fly } from "svelte/transition";
+  export let openCarousel;
   let currentIdx = 0;
   const next = () => {
     currentIdx = (currentIdx + 1) % images.length;
@@ -27,11 +29,40 @@
   </div>
 {/each}
 <div on:click={prev} class="next"><i class="fas fa-chevron-right" /></div>
+<div
+  in:fly={{ y: -50 }}
+  out:fly={{ y: -50 }}
+  class="close-button"
+  on:click={openCarousel}
+>
+  <p class="close-button-text">X</p>
+</div>
 
 <style>
   .container {
     position: relative;
     box-shadow: var(--main-shadow);
+  }
+  .close-button {
+    position: fixed;
+    top: 5px;
+    right: 7px;
+    height: 50px;
+    width: 50px;
+    z-index: 9999;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .close-button:active {
+    transform: scale(0.9);
+  }
+  .close-button-text {
+    color: rgba(6, 15, 6);
+    font-size: 28px;
   }
   .meal-generator {
     height: 374px;
@@ -72,6 +103,9 @@
     width: 20px;
     padding: 15px;
     cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    display: flex;
   }
   .prev {
     text-align: left;

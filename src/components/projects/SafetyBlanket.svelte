@@ -1,7 +1,7 @@
 <script>
   import Carousel from "../utils/Carousel.svelte";
   import { store, darkmode } from "../../store";
-  import { fade } from "svelte/transition";
+  import { fade, fly } from "svelte/transition";
   let safetyImages = $store.safetyBlanket.images;
   let techUsed = $store.safetyBlanket.tech;
   import ProjectTechGrid from "../utils/ProjectTechGrid.svelte";
@@ -51,7 +51,11 @@
       on:click={clickOutsideClose}
       class="carousel-container"
     >
-      <Carousel projectClass="safety-blanket" images={safetyImages} />
+      <Carousel
+        {openCarousel}
+        projectClass="safety-blanket"
+        images={safetyImages}
+      />
     </div>
   {/if}
 </div>
@@ -63,6 +67,7 @@
     box-shadow: var(--main-shadow);
     transition: 0.75s all linear;
   }
+
   .image-icon {
     width: 25%;
     display: flex;
@@ -87,6 +92,13 @@
     font-weight: 900;
     margin: 0;
     font-family: "Lato", sans-serif;
+  }
+  .close-carousel {
+    color: white;
+    font-size: 42px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
   }
   .title {
     position: absolute;

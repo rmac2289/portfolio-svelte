@@ -269,6 +269,7 @@ export const store = readable({
           class: "fab fa-js",
           color: "#eace2c",
         },
+        { name: "jQuery", src: "images/icons/iconJquery.png" },
         {
           name: "HTML5",
           class: "fab fa-html5",
