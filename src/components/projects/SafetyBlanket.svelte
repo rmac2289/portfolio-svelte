@@ -93,13 +93,6 @@
     margin: 0;
     font-family: "Lato", sans-serif;
   }
-  .close-carousel {
-    color: white;
-    font-size: 42px;
-    position: absolute;
-    right: 20px;
-    top: 20px;
-  }
   .title {
     position: absolute;
     left: 0;

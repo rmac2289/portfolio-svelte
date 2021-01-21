@@ -153,7 +153,7 @@
       display: none;
     }
   }
-  @media only screen and (min-width: 1024px) {
+  @media only screen and (min-width: 1150px) {
     .thumbnail {
       width: 350px;
     }
