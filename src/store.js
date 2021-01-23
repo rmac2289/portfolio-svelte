@@ -7,7 +7,6 @@ export const store = readable({
     { name: "CSS3", class: "fab fa-css3", color: "#264de4" },
     { name: "React", class: "fab fa-react", color: "#61dafb" },
     { name: "React Native", class: "fab fa-react", color: "#61dafb" },
-
     { name: "Svelte", src: "images/icons/iconSvelte.png" },
     { name: "Vue", class: "fab fa-vuejs", color: "#41B883" },
     { name: "Node.js", class: "fab fa-node-js", color: "#68a063" },
