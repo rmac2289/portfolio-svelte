@@ -22,6 +22,12 @@ export const store = readable({
     { name: "Heroku", src: "images/icons/iconHeroku.png" },
     { name: "Netlify", src: "images/icons/iconNetlify.png" },
     { name: "Vercel", src: "images/icons/iconVercel.jpg" },
+    { name: "Apollo Client/Server", src: "images/icons/iconApollo.png" },
+  ],
+  learning: [
+    { name: "ASP.NET Core", src: "images/icons/iconDotnet.png" },
+    { name: "C#", src: "images/icons/iconCsharp.png" },
+    { name: "TypeScript#", src: "images/icons/iconTypescript.png" },
   ],
   safetyBlanket: {
     name: "Safety Blanket",
@@ -32,11 +38,13 @@ export const store = readable({
         { name: "HTML5", class: "fab fa-html5", color: "rgb(234,100,51)" },
         { name: "CSS3", class: "fab fa-css3", color: "#264de4" },
         { name: "GraphQL", src: "images/icons/iconGraphql.png" },
+        { name: "Apollo Client", src: "images/icons/iconApollo.png" },
       ],
       backend: [
         { name: "MongoDB", src: "images/icons/iconMongodb.png" },
         { name: "Node.js", class: "fab fa-node-js", color: "#68a063" },
         { name: "GraphQL", src: "images/icons/iconGraphql.png" },
+        { name: "Apollo Server", src: "images/icons/iconApollo.png" },
       ],
       misc: [
         { name: "npm", class: "fab fa-npm", color: "rgb(181,52,54)" },

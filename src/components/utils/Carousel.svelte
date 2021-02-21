@@ -19,13 +19,14 @@
 
 <div on:click={next} class="prev"><i class="fas fa-chevron-left" /></div>
 {#each [images[currentIdx]] as photo (currentIdx)}
-  <div
-    transition:blur={{ duration: 600 }}
-    animate:flip
-    class="container {projectClass}"
-  >
-    <div transition:blur={{ duration: 600 }} class="controls" />
-    <img src={photo.src} alt={photo.name} class={projectClass} />
+  <div animate:flip class="container {projectClass}">
+    <div class="controls" />
+    <img
+      in:blur={{ duration: 400 }}
+      src={photo.src}
+      alt={photo.name}
+      class={projectClass}
+    />
   </div>
 {/each}
 <div on:click={prev} class="next"><i class="fas fa-chevron-right" /></div>

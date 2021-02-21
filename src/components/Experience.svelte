@@ -39,6 +39,24 @@
         </div>
       {/each}
     </div>
+    <h1 in:fly={{ y: 1000, duration: 750 }} class="header">
+      Works in Progress
+    </h1>
+
+    <div in:fly={{ y: 1000, duration: 750 }} class="tech-grid">
+      {#each $store.learning as learning}
+        <div class={$darkmode ? "icon-box icon-box-dark" : "icon-box"}>
+          {#if learning.class}
+            <i class={learning.class} style="color:{learning.color}" />
+          {:else}
+            <img src={learning.src} alt={learning.name} height="30" />
+          {/if}
+          <div class="name">
+            <div id="name">{learning.name}</div>
+          </div>
+        </div>
+      {/each}
+    </div>
   {/if}
 </Layout>
 
