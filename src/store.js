@@ -3,6 +3,7 @@ import { readable, writable } from "svelte/store";
 export const store = readable({
   tech: [
     { name: "JavaScript", class: "fab fa-js", color: "#eace2c" },
+    { name: "TypeScript", src: "images/icons/iconTypescript.png" },
     { name: "HTML5", class: "fab fa-html5", color: "rgb(234,100,51)" },
     { name: "CSS3", class: "fab fa-css3", color: "#264de4" },
     { name: "React", class: "fab fa-react", color: "#61dafb" },
@@ -25,9 +26,9 @@ export const store = readable({
     { name: "Apollo Client/Server", src: "images/icons/iconApollo.png" },
   ],
   learning: [
-    { name: "ASP.NET Core", src: "images/icons/iconDotnet.png" },
+    // { name: "ASP.NET Core", src: "images/icons/iconDotnet.png" },
     { name: "C#", src: "images/icons/iconCsharp.png" },
-    { name: "TypeScript#", src: "images/icons/iconTypescript.png" },
+    { name: "Java", src: "images/icons/iconJava.png" },
   ],
   safetyBlanket: {
     name: "Safety Blanket",

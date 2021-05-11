@@ -71,22 +71,9 @@
       </div>
       <div
         on:click={toggleNav}
-        onclick="location.href='https://ross-scott-macdonald.medium.com'"
-        class={$darkmode ? "link-div dark" : "link-div"}
-        in:fly={{ duration: 1000, delay: 300, y: 100 }}
-        out:fly={{ duration: 1000, delay: 200, y: 300 }}
-      >
-        <a
-          id="blog"
-          href="https://ross-scott-macdonald.com/blog"
-          target="_blank"
-          rel="noopener noreferrer"> blog </a>
-      </div>
-      <div
-        on:click={toggleNav}
         class={$darkmode ? "link-div dark" : "link-div"}
         in:fly={{ duration: 1000, delay: 500, y: 100 }}
-        out:fly={{ duration: 1000, delay: 100, y: 200 }}
+        out:fly={{ duration: 1000, delay: 200, y: 300 }}
       >
         <a className="contact" href="/contact"> contact </a>
       </div>
