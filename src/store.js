@@ -30,6 +30,36 @@ export const store = readable({
     { name: "C#", src: "images/icons/iconCsharp.png" },
     { name: "Java", src: "images/icons/iconJava.png" },
   ],
+  OTmobile: {
+    name: "Overtime Tracker",
+    tech: {
+      frontend: [
+        { name: "React Native", class: "fab fa-react", color: "#61dafb" },
+        { name: "TypeScript", src: "images/icons/iconTypescript.png" },
+        { name: "JavaScript", class: "fab fa-js", color: "#eace2c" },
+        { name: "CSS", class: "fab fa-css3", color: "#264de4" },
+      ],
+      misc: [
+        { name: "npm", class: "fab fa-npm", color: "rgb(181,52,54)" },
+        { name: "Git", class: "fab fa-git-alt", color: "#f05030" },
+        { name: "Expo", src: "images/icons/iconExpo.png" },
+        {
+          name: "GitHub",
+          class: "fab fa-github",
+          color: "rgb(210,105,35)",
+        },
+      ],
+    },
+    images: [
+      { src: "images/OT/OThome.png" },
+      { src: "images/OT/OTnew.png" },
+      { src: "images/OT/OTdatepicker.png" },
+      { src: "images/OT/OTadded.png" },
+      { src: "images/OT/OTall.png" },
+      { src: "images/OT/OTupdate.png" },
+      { src: "images/OT/OTdelete.png" },
+    ],
+  },
   safetyBlanket: {
     name: "Safety Blanket",
     tech: {

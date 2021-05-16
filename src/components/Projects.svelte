@@ -7,6 +7,7 @@
   import Portfolio from "./projects/Portfolio.svelte";
   import MealGenerator from "./projects/MealGenerator.svelte";
   import { fly } from "svelte/transition";
+  import OTmobile from "./projects/OTmobile.svelte";
 </script>
 
 <svelte:head>
@@ -14,6 +15,7 @@
 </svelte:head>
 <Layout>
   <div class="grid" transition:fly={{ duration: 1000, y: 500 }}>
+    <OTmobile />
     <SafetyBlanket />
     <Fyp />
     <Hearsay />

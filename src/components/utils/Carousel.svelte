@@ -84,7 +84,8 @@
     width: 300px;
     height: 224px;
   }
-  .safety-blanket {
+  .safety-blanket,
+  .overtime-tracker {
     height: 533px;
     width: 300px;
   }
@@ -138,7 +139,8 @@
     .portfolio {
       width: 600px;
     }
-    .safety-blanket {
+    .safety-blanket,
+    .overtime-tracker {
       width: 400px;
       height: 711px;
     }
