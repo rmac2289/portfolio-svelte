@@ -11,6 +11,11 @@ ___
 - Svelte
 - JavaScript
 - TypeScript
+- Rollup
+- HTML/CSS
+- npm
+- Cloudinary
+
 
 
 
