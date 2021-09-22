@@ -2,7 +2,7 @@
 
 The repo for my development portfolio, built with Svelte. 
 
-[Check it out](https://www.ross-scott-macdonald.com)
+[Check it out](https://www.rossmacdonald.dev)
 
 ![portfolio home](public/images/portfoliohome.png)
 
@@ -14,7 +14,7 @@ ___
 - Rollup
 - HTML/CSS
 - npm
-- Cloudinary
+- Netlify
 
 
 
