@@ -38,10 +38,9 @@
   </header>
   <div>
     <p>
-      While not working my butt off towards a software gig, I work (much more
-      than) full-time as a 9-1-1 Dispatcher. Due to the horrendous amount of
-      overtime, I've become tired of wading through all of my calendar's events
-      to see when I'm working week to week. I spun up this little app using
+      Before breaking into the tech world I worked as a 9-1-1 Dispatcher. Due to the horrendous amount of
+      overtime, I became tired of wading through all of my calendar's events
+      to see when I was working week to week. I spun up this little app using
       React Native, TypeScript, and different aspects of the Expo calendar API.
       Identifying problems in my life and creating my own automated solutions
       has been the most rewarding part of software development thus far.
