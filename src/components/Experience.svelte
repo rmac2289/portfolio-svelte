@@ -27,32 +27,32 @@
     <h1 in:fly={{ y: 1000, duration: 750 }} class="header">Tech</h1>
     <div in:fly={{ y: 1000, duration: 750 }} class="tech-grid">
       {#each $store.tech as tech}
-        <div class={$darkmode ? "icon-box icon-box-dark" : "icon-box"}>
+        <a href={tech.href} class={$darkmode ? "icon-box icon-box-dark" : "icon-box"} target="_blank">
           {#if tech.class}
             <i class={tech.class} style="color:{tech.color}" />
           {:else}
             <img src={tech.src} alt={tech.name} height="30" />
           {/if}
           <div class="name">
-            <div id="name">{tech.name}</div>
+            <p id="name"> {tech.name} </p>
           </div>
-        </div>
+        </a>
       {/each}
     </div>
     <h1 in:fly={{ y: 1000, duration: 750 }} class="header">
-      Works in Progress
+      Skills
     </h1>
 
     <div in:fly={{ y: 1000, duration: 750 }} class="tech-grid">
       {#each $store.learning as learning}
         <div class={$darkmode ? "icon-box icon-box-dark" : "icon-box"}>
           {#if learning.class}
-            <i class={learning.class} style="color:{learning.color}" />
+            <i class={learning.class} style="color:{learning.color}"  />
           {:else}
             <img src={learning.src} alt={learning.name} height="30" />
           {/if}
           <div class="name">
-            <div id="name">{learning.name}</div>
+            <p id="name">{learning.name}</p>
           </div>
         </div>
       {/each}
@@ -61,15 +61,14 @@
 </Layout>
 
 <style>
+  a {
+    color: white;
+  }
   .header {
     color: white;
     padding-left: 1rem;
   }
-  p {
-    color: white;
-    font-size: 1.25em;
-    font-weight: 800;
-  }
+ 
   div {
     color: white;
   }
@@ -85,6 +84,9 @@
     font-size: 1.75rem;
     height: 100%;
     width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
   }
   .tech-grid {
     padding: 1rem;
@@ -97,21 +99,24 @@
   .icon-box {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    padding: 0.5rem;
+    padding: 0.15rem;
     padding-left: 1rem;
     padding-right: 1rem;
     border-radius: 1px;
     background: rgb(0, 0, 0, 0.5);
     box-shadow: var(--main-shadow);
-    transition: 0.75s all linear;
+    transition: 0.5s all linear;
     border: 1px solid transparent;
+    align-items: center;
+    justify-content: left;
   }
   .icon-box-dark {
     box-shadow: var(--dark-shadow);
   }
   .icon-box:hover {
     background: rgb(0, 0, 0, 0.75);
-    transform: scale(1.075);
+    transform: scale(1.075) rotateY(18deg);
+   
   }
   .img {
     height: 30px;
