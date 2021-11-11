@@ -8,6 +8,7 @@
   import MealGenerator from "./projects/MealGenerator.svelte";
   import { fly } from "svelte/transition";
   import OTmobile from "./projects/OTmobile.svelte";
+  import UxDashboard from './projects/UxDashboard.svelte'
 </script>
 
 <svelte:head>
@@ -15,6 +16,7 @@
 </svelte:head>
 <Layout>
   <div class="grid" transition:fly={{ duration: 1000, y: 500 }}>
+    <UxDashboard/>
     <OTmobile />
     <SafetyBlanket />
     <Fyp />

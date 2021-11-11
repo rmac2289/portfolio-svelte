@@ -1,13 +1,15 @@
 # My Dev Portfolio
 
-The repo for my development portfolio, built with Svelte. 
+The repo for my development portfolio, built with Svelte.
 
 [Check it out](https://www.rossmacdonald.dev)
 
 ![portfolio home](public/images/portfoliohome.png)
 
-## Tech Stack 
-___
+## Tech Stack
+
+---
+
 - Svelte
 - JavaScript
 - TypeScript
@@ -15,7 +17,3 @@ ___
 - HTML/CSS
 - npm
 - Netlify
-
-
-
-

@@ -2,6 +2,7 @@
   import Layout from "./utils/Layout.svelte";
   import { store, darkmode } from "../store";
   import { fly } from "svelte/transition";
+  import Experience from '../experience.md'
   let y;
 </script>
 
@@ -11,7 +12,7 @@
 </svelte:head>
 <Layout>
   <h1 class="header">Experience</h1>
-  <p class="main-p">
+  <!-- <p class="main-p">
     {$store.experience1}
     <br />
     <br />
@@ -22,7 +23,10 @@
     <br />
     <br />
     {$store.experience4}
-  </p>
+  </p> -->
+  <div class="main-p">
+  <Experience />
+</div>
   {#if y > 50 || window.innerWidth > 1500}
     <h1 in:fly={{ y: 1000, duration: 750 }} class="header">Tech</h1>
     <div in:fly={{ y: 1000, duration: 750 }} class="tech-grid">
@@ -79,6 +83,7 @@
     padding: 1rem;
     font-weight: initial;
     transition: 1s all linear;
+    background: rgba(0,0,0,0.1)
   }
   i {
     font-size: 1.75rem;

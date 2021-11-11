@@ -80,7 +80,7 @@
   .portfolio {
     width: 300px;
   }
-  .hearsay {
+  .hearsay, .uxDashboard{
     width: 300px;
     height: 224px;
   }
@@ -135,6 +135,10 @@
     .hearsay {
       height: 500px;
       width: 671px;
+    }
+    .uxDashboard {
+      height: 600px;
+      width: 1100px
     }
     .portfolio {
       width: 600px;

@@ -19,6 +19,7 @@
   "dependencies": {
     "@cloudinary/svelte": "0.0.1-alpha.1",
     "emailjs-com": "^2.6.4",
+    "mdsvex": "^0.9.8",
     "sirv-cli": "^1.0.0",
     "svelte-icons": "^2.1.0",
     "svelte-routing": "^1.4.2",
