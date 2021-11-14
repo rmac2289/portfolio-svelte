@@ -9,7 +9,7 @@
         position: fixed;
         opacity: 0.75;
         top: 10px;
-        right: 10px;
+        right: 20px;
         max-width: 600px;
         flex-direction: column;
         justify-content: center;

@@ -2379,15 +2379,15 @@ var app = (function () {
     			this.h();
     		},
     		h: function hydrate() {
-    			attr_dev(h1, "class", "corner-name svelte-6i5zmz");
+    			attr_dev(h1, "class", "corner-name svelte-1l9meeq");
     			add_location(h1, file$2, 65, 8, 1359);
-    			attr_dev(hr, "class", "svelte-6i5zmz");
+    			attr_dev(hr, "class", "svelte-1l9meeq");
     			add_location(hr, file$2, 66, 8, 1411);
-    			attr_dev(h2, "class", "corner-sub svelte-6i5zmz");
+    			attr_dev(h2, "class", "corner-sub svelte-1l9meeq");
     			add_location(h2, file$2, 68, 12, 1463);
-    			attr_dev(div0, "class", "sub-header svelte-6i5zmz");
+    			attr_dev(div0, "class", "sub-header svelte-1l9meeq");
     			add_location(div0, file$2, 67, 8, 1426);
-    			attr_dev(div1, "class", "container svelte-6i5zmz");
+    			attr_dev(div1, "class", "container svelte-1l9meeq");
     			add_location(div1, file$2, 61, 4, 1216);
     		},
     		m: function mount(target, anchor) {
