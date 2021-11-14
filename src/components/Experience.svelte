@@ -83,7 +83,6 @@
     padding: 1rem;
     font-weight: initial;
     transition: 1s all linear;
-    background: rgba(0,0,0,0.1)
   }
   i {
     font-size: 1.75rem;

@@ -38,9 +38,9 @@
     </header>
     <div>
       <p>
-        Built a data pipeline from the Testim.io test automation framework to a node.js api, which
-        dumped the data into Elasticsearch. I visualized the data in Kibana to enable teams to check 
-        on the performance metrics of their applications in different testing and production environments. 
+        Designed, wrote and implemented a data pipeline from the Testim.io test automation framework. I extracted data from within the framework by building a node.js/express api, which
+        dumped the data into an Elasticsearch cluster. I visualized the data in Kibana to enable teams to check 
+        on the performance metrics of their applications in different testing and production environments. <br/><br/><span>*Images shown do not use actual company data</span>
       </p>
     </div>
     {#if carouselOpen}
@@ -65,7 +65,11 @@
       box-shadow: var(--main-shadow);
       transition: 0.75s all linear;
     }
-  
+  span {
+  font-family: "Lato", sans-serif;
+
+    font-size: 75%;
+  }
     .image-icon {
       width: 25%;
       display: flex;

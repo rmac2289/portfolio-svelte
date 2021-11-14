@@ -1345,13 +1345,13 @@ var app = (function () {
           href: "https://www.apollographql.com",
         },
         {
-          name: "Testim",
+          name: "Testim.io",
           src: "images/icons/testim.jpg",
           href: "https://testim.io",
         },
         {
           name: "Azure DevOps",
-          src: "images/icons/azure.png",
+          src: "images/icons/iconAzure.png",
           href: "https://azure.microsoft.com/en-us/services/devops/",
         },
         {
@@ -1798,17 +1798,21 @@ var app = (function () {
         "c",
         "k",
         " ",
-        "W",
-        "e",
-        "b",
-        " ",
-        "D",
-        "e",
-        "v",
-        "e",
-        "l",
+        "S",
         "o",
-        "p",
+        "f",
+        "t",
+        "w",
+        "a",
+        "r",
+        "e",
+        " ",
+        "E",
+        "n",
+        "g",
+        "i",
+        "n",
+        "e",
         "e",
         "r",
       ],
@@ -2351,7 +2355,7 @@ var app = (function () {
     			t2 = space();
     			div0 = element("div");
     			h2 = element("h2");
-    			t3 = text("Full Stack Web Developer");
+    			t3 = text("Full Stack Developer");
     			this.h();
     		},
     		l: function claim(nodes) {
@@ -2368,7 +2372,7 @@ var app = (function () {
     			var div0_nodes = children(div0);
     			h2 = claim_element(div0_nodes, "H2", { class: true });
     			var h2_nodes = children(h2);
-    			t3 = claim_text(h2_nodes, "Full Stack Web Developer");
+    			t3 = claim_text(h2_nodes, "Full Stack Developer");
     			h2_nodes.forEach(detach_dev);
     			div0_nodes.forEach(detach_dev);
     			div1_nodes.forEach(detach_dev);
@@ -3031,13 +3035,13 @@ var app = (function () {
     			this.h();
     		},
     		h: function hydrate() {
-    			attr_dev(h10, "class", "header svelte-c45y2x");
+    			attr_dev(h10, "class", "header svelte-10vcal7");
     			add_location(h10, file$5, 30, 4, 643);
-    			attr_dev(div0, "class", "tech-grid svelte-c45y2x");
+    			attr_dev(div0, "class", "tech-grid svelte-10vcal7");
     			add_location(div0, file$5, 31, 4, 712);
-    			attr_dev(h11, "class", "header svelte-c45y2x");
+    			attr_dev(h11, "class", "header svelte-10vcal7");
     			add_location(h11, file$5, 45, 4, 1228);
-    			attr_dev(div1, "class", "tech-grid svelte-c45y2x");
+    			attr_dev(div1, "class", "tech-grid svelte-10vcal7");
     			add_location(div1, file$5, 49, 4, 1312);
     		},
     		m: function mount(target, anchor) {
@@ -3228,7 +3232,7 @@ var app = (function () {
     			this.h();
     		},
     		h: function hydrate() {
-    			attr_dev(i, "class", i_class_value = "" + (null_to_empty(/*tech*/ ctx[7].class) + " svelte-c45y2x"));
+    			attr_dev(i, "class", i_class_value = "" + (null_to_empty(/*tech*/ ctx[7].class) + " svelte-10vcal7"));
     			set_style(i, "color", /*tech*/ ctx[7].color);
     			add_location(i, file$5, 35, 12, 948);
     		},
@@ -3236,7 +3240,7 @@ var app = (function () {
     			insert_dev(target, i, anchor);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*$store*/ 2 && i_class_value !== (i_class_value = "" + (null_to_empty(/*tech*/ ctx[7].class) + " svelte-c45y2x"))) {
+    			if (dirty & /*$store*/ 2 && i_class_value !== (i_class_value = "" + (null_to_empty(/*tech*/ ctx[7].class) + " svelte-10vcal7"))) {
     				attr_dev(i, "class", i_class_value);
     			}
 
@@ -3310,13 +3314,13 @@ var app = (function () {
     		h: function hydrate() {
     			attr_dev(p, "id", "name");
     			add_location(p, file$5, 40, 12, 1138);
-    			attr_dev(div, "class", "name svelte-c45y2x");
+    			attr_dev(div, "class", "name svelte-10vcal7");
     			add_location(div, file$5, 39, 10, 1107);
     			attr_dev(a, "href", a_href_value = /*tech*/ ctx[7].href);
 
     			attr_dev(a, "class", a_class_value = "" + (null_to_empty(/*$darkmode*/ ctx[2]
     			? "icon-box icon-box-dark"
-    			: "icon-box") + " svelte-c45y2x"));
+    			: "icon-box") + " svelte-10vcal7"));
 
     			attr_dev(a, "target", "_blank");
     			add_location(a, file$5, 33, 8, 814);
@@ -3351,7 +3355,7 @@ var app = (function () {
 
     			if (dirty & /*$darkmode*/ 4 && a_class_value !== (a_class_value = "" + (null_to_empty(/*$darkmode*/ ctx[2]
     			? "icon-box icon-box-dark"
-    			: "icon-box") + " svelte-c45y2x"))) {
+    			: "icon-box") + " svelte-10vcal7"))) {
     				attr_dev(a, "class", a_class_value);
     			}
     		},
@@ -3437,7 +3441,7 @@ var app = (function () {
     			this.h();
     		},
     		h: function hydrate() {
-    			attr_dev(i, "class", i_class_value = "" + (null_to_empty(/*learning*/ ctx[4].class) + " svelte-c45y2x"));
+    			attr_dev(i, "class", i_class_value = "" + (null_to_empty(/*learning*/ ctx[4].class) + " svelte-10vcal7"));
     			set_style(i, "color", /*learning*/ ctx[4].color);
     			add_location(i, file$5, 53, 12, 1529);
     		},
@@ -3445,7 +3449,7 @@ var app = (function () {
     			insert_dev(target, i, anchor);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*$store*/ 2 && i_class_value !== (i_class_value = "" + (null_to_empty(/*learning*/ ctx[4].class) + " svelte-c45y2x"))) {
+    			if (dirty & /*$store*/ 2 && i_class_value !== (i_class_value = "" + (null_to_empty(/*learning*/ ctx[4].class) + " svelte-10vcal7"))) {
     				attr_dev(i, "class", i_class_value);
     			}
 
@@ -3518,12 +3522,12 @@ var app = (function () {
     		h: function hydrate() {
     			attr_dev(p, "id", "name");
     			add_location(p, file$5, 58, 12, 1736);
-    			attr_dev(div0, "class", "name svelte-c45y2x");
+    			attr_dev(div0, "class", "name svelte-10vcal7");
     			add_location(div0, file$5, 57, 10, 1705);
 
     			attr_dev(div1, "class", div1_class_value = "" + (null_to_empty(/*$darkmode*/ ctx[2]
     			? "icon-box icon-box-dark"
-    			: "icon-box") + " svelte-c45y2x"));
+    			: "icon-box") + " svelte-10vcal7"));
 
     			add_location(div1, file$5, 51, 8, 1422);
     		},
@@ -3553,7 +3557,7 @@ var app = (function () {
 
     			if (dirty & /*$darkmode*/ 4 && div1_class_value !== (div1_class_value = "" + (null_to_empty(/*$darkmode*/ ctx[2]
     			? "icon-box icon-box-dark"
-    			: "icon-box") + " svelte-c45y2x"))) {
+    			: "icon-box") + " svelte-10vcal7"))) {
     				attr_dev(div1, "class", div1_class_value);
     			}
     		},
@@ -3615,9 +3619,9 @@ var app = (function () {
     			this.h();
     		},
     		h: function hydrate() {
-    			attr_dev(h1, "class", "header svelte-c45y2x");
+    			attr_dev(h1, "class", "header svelte-10vcal7");
     			add_location(h1, file$5, 13, 2, 311);
-    			attr_dev(div, "class", "main-p svelte-c45y2x");
+    			attr_dev(div, "class", "main-p svelte-10vcal7");
     			add_location(div, file$5, 26, 2, 551);
     		},
     		m: function mount(target, anchor) {
@@ -8796,7 +8800,7 @@ var app = (function () {
     		},
     		h: function hydrate() {
     			attr_dev(div, "class", "carousel-container");
-    			add_location(div, file$h, 46, 6, 1551);
+    			add_location(div, file$h, 46, 6, 1716);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -8865,7 +8869,11 @@ var app = (function () {
     	let div3;
     	let p;
     	let t5;
+    	let br0;
+    	let br1;
+    	let span;
     	let t6;
+    	let t7;
     	let div4_class_value;
     	let current;
     	let mounted;
@@ -8896,8 +8904,12 @@ var app = (function () {
     			t4 = space();
     			div3 = element("div");
     			p = element("p");
-    			t5 = text("Built a data pipeline from the Testim.io test automation framework to a node.js api, which\n        dumped the data into Elasticsearch. I visualized the data in Kibana to enable teams to check \n        on the performance metrics of their applications in different testing and production environments.");
-    			t6 = space();
+    			t5 = text("Designed, wrote and implemented a data pipeline from the Testim.io test automation framework. I extracted data from within the framework by building a node.js/express api, which\n        dumped the data into an Elasticsearch cluster. I visualized the data in Kibana to enable teams to check \n        on the performance metrics of their applications in different testing and production environments. ");
+    			br0 = element("br");
+    			br1 = element("br");
+    			span = element("span");
+    			t6 = text("*Images shown do not use actual company data");
+    			t7 = space();
     			if (if_block) if_block.c();
     			this.h();
     		},
@@ -8939,36 +8951,46 @@ var app = (function () {
     			var div3_nodes = children(div3);
     			p = claim_element(div3_nodes, "P", { class: true });
     			var p_nodes = children(p);
-    			t5 = claim_text(p_nodes, "Built a data pipeline from the Testim.io test automation framework to a node.js api, which\n        dumped the data into Elasticsearch. I visualized the data in Kibana to enable teams to check \n        on the performance metrics of their applications in different testing and production environments.");
+    			t5 = claim_text(p_nodes, "Designed, wrote and implemented a data pipeline from the Testim.io test automation framework. I extracted data from within the framework by building a node.js/express api, which\n        dumped the data into an Elasticsearch cluster. I visualized the data in Kibana to enable teams to check \n        on the performance metrics of their applications in different testing and production environments. ");
+    			br0 = claim_element(p_nodes, "BR", {});
+    			br1 = claim_element(p_nodes, "BR", {});
+    			span = claim_element(p_nodes, "SPAN", { class: true });
+    			var span_nodes = children(span);
+    			t6 = claim_text(span_nodes, "*Images shown do not use actual company data");
+    			span_nodes.forEach(detach_dev);
     			p_nodes.forEach(detach_dev);
     			div3_nodes.forEach(detach_dev);
-    			t6 = claim_space(div4_nodes);
+    			t7 = claim_space(div4_nodes);
     			if (if_block) if_block.l(div4_nodes);
     			div4_nodes.forEach(detach_dev);
     			this.h();
     		},
     		h: function hydrate() {
-    			attr_dev(h2, "class", "svelte-1wfxytk");
+    			attr_dev(h2, "class", "svelte-63cywd");
     			add_location(h2, file$h, 22, 8, 725);
-    			attr_dev(i, "class", "fas fa-photo-video svelte-1wfxytk");
+    			attr_dev(i, "class", "fas fa-photo-video svelte-63cywd");
     			add_location(i, file$h, 24, 10, 842);
-    			attr_dev(div0, "class", "image-icon svelte-1wfxytk");
+    			attr_dev(div0, "class", "image-icon svelte-63cywd");
     			add_location(div0, file$h, 23, 8, 783);
-    			attr_dev(div1, "class", "title svelte-1wfxytk");
+    			attr_dev(div1, "class", "title svelte-63cywd");
     			add_location(div1, file$h, 21, 6, 697);
-    			attr_dev(div2, "class", "header-left svelte-1wfxytk");
+    			attr_dev(div2, "class", "header-left svelte-63cywd");
     			add_location(div2, file$h, 27, 6, 909);
-    			attr_dev(img, "class", "thumbnail svelte-1wfxytk");
+    			attr_dev(img, "class", "thumbnail svelte-63cywd");
     			attr_dev(img, "width", "350");
     			if (img.src !== (img_src_value = "images/dashboardscreenshot.PNG")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "UX Dashboard");
     			add_location(img, file$h, 30, 6, 993);
-    			attr_dev(header, "class", "svelte-1wfxytk");
+    			attr_dev(header, "class", "svelte-63cywd");
     			add_location(header, file$h, 20, 4, 682);
-    			attr_dev(p, "class", "svelte-1wfxytk");
+    			add_location(br0, file$h, 42, 107, 1597);
+    			add_location(br1, file$h, 42, 112, 1602);
+    			attr_dev(span, "class", "svelte-63cywd");
+    			add_location(span, file$h, 42, 117, 1607);
+    			attr_dev(p, "class", "svelte-63cywd");
     			add_location(p, file$h, 39, 6, 1187);
     			add_location(div3, file$h, 38, 4, 1175);
-    			attr_dev(div4, "class", div4_class_value = "" + (null_to_empty(/*$darkmode*/ ctx[1] ? "container-dark" : "container") + " svelte-1wfxytk"));
+    			attr_dev(div4, "class", div4_class_value = "" + (null_to_empty(/*$darkmode*/ ctx[1] ? "container-dark" : "container") + " svelte-63cywd"));
     			add_location(div4, file$h, 19, 2, 621);
     		},
     		m: function mount(target, anchor) {
@@ -8989,7 +9011,11 @@ var app = (function () {
     			append_dev(div4, div3);
     			append_dev(div3, p);
     			append_dev(p, t5);
-    			append_dev(div4, t6);
+    			append_dev(p, br0);
+    			append_dev(p, br1);
+    			append_dev(p, span);
+    			append_dev(span, t6);
+    			append_dev(div4, t7);
     			if (if_block) if_block.m(div4, null);
     			current = true;
 
@@ -9026,7 +9052,7 @@ var app = (function () {
     				check_outros();
     			}
 
-    			if (!current || dirty & /*$darkmode*/ 2 && div4_class_value !== (div4_class_value = "" + (null_to_empty(/*$darkmode*/ ctx[1] ? "container-dark" : "container") + " svelte-1wfxytk"))) {
+    			if (!current || dirty & /*$darkmode*/ 2 && div4_class_value !== (div4_class_value = "" + (null_to_empty(/*$darkmode*/ ctx[1] ? "container-dark" : "container") + " svelte-63cywd"))) {
     				attr_dev(div4, "class", div4_class_value);
     			}
     		},
