@@ -28,7 +28,7 @@
   }
   @media only screen and (min-width: 720px) {
     .iframe {
-      min-height: 1200px;
+      min-height: 1000px;
       min-width: 800px;
     }
   }
