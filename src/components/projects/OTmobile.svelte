@@ -1,6 +1,7 @@
 <script>
   import Carousel from "../utils/Carousel.svelte";
   import { store, darkmode } from "../../store";
+  import { Image } from '@cloudinary/svelte';
   import { fade, fly } from "svelte/transition";
   let OTImages = $store.OTmobile.images;
   let techUsed = $store.OTmobile.tech;
@@ -28,13 +29,14 @@
     <div class="header-left">
       <ProjectTechGrid {techUsed} />
     </div>
-    <img
-      on:click={openCarousel}
-      class="thumbnail"
-      width="150"
-      src="images/OT/OThome.png"
+    <div       class="thumbnail"
+    on:click={openCarousel}>
+    <Image
+      cloud_name="de36vblcl"
+      public_id="portfolio/images/OT/OThome_a0bmp4"
       alt="Overtime Tracker"
-    />
+width="200"    />
+  </div>
   </header>
   <div>
     <p>

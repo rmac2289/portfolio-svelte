@@ -17,49 +17,6 @@
   }
 </script>
 
-<div class={$darkmode ? "container-dark" : "container"}>
-  <header>
-    <div class="title">
-      <h2>Safety Blanket</h2>
-      <div on:click={openCarousel} class="image-icon">
-        <i class="fas fa-photo-video" />
-      </div>
-    </div>
-    <div class="header-left">
-      <ProjectTechGrid {techUsed} />
-    </div>
-    <img
-      on:click={openCarousel}
-      class="thumbnail"
-      width="150"
-      src="images/safetyblanket/safetyHome.png"
-      alt="fyp"
-    />
-  </header>
-  <div>
-    <p>
-      Safety Blanket is a full stack mobile app that provides users with
-      emergency and non-emergency public safety help at their fingertips. A
-      user's geolocation is used to find agencies closest to them. The landing
-      screen give the user the option to call an agency, open up the location in
-      google maps, or to save the contact information in their phone.
-    </p>
-  </div>
-  {#if carouselOpen}
-    <div
-      transition:fade
-      on:click={clickOutsideClose}
-      class="carousel-container"
-    >
-      <Carousel
-        {openCarousel}
-        projectClass="safety-blanket"
-        images={safetyImages}
-      />
-    </div>
-  {/if}
-</div>
-
 <style>
   .container {
     background: rgb(0, 0, 0, 0.5);
@@ -150,3 +107,43 @@
     }
   }
 </style>
+
+<div class={$darkmode ? 'container-dark' : 'container'}>
+  <header>
+    <div class="title">
+      <h2>Safety Blanket</h2>
+      <div on:click={openCarousel} class="image-icon">
+        <i class="fas fa-photo-video" />
+      </div>
+    </div>
+    <div class="header-left">
+      <ProjectTechGrid {techUsed} />
+    </div>
+    <img
+      on:click={openCarousel}
+      class="thumbnail"
+      width="150"
+      src="images/safetyblanket/safetyHome.png"
+      alt="fyp" />
+  </header>
+  <div>
+    <p>
+      Safety Blanket is a full stack mobile app that provides users with
+      emergency and non-emergency public safety help at their fingertips. A
+      user's geolocation is used to find agencies closest to them. The landing
+      screen give the user the option to call an agency, open up the location in
+      google maps, or to save the contact information in their phone.
+    </p>
+  </div>
+  {#if carouselOpen}
+    <div
+      transition:fade
+      on:click={clickOutsideClose}
+      class="carousel-container">
+      <Carousel
+        {openCarousel}
+        projectClass="safety-blanket"
+        images={safetyImages} />
+    </div>
+  {/if}
+</div>

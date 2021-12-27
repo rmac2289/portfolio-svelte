@@ -31,9 +31,10 @@
     <img
       on:click={openCarousel}
       class="thumbnail"
-      src="images/portfoliohome.png"
+      src="https://res.cloudinary.com/de36vblcl/image/upload/v1640633040/portfolio/images/portfoliohome_i4082f.png"
       alt="portfolio"
     />
+    
   </header>
   <div>
     <p>
