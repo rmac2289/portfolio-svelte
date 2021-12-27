@@ -12,18 +12,6 @@
 </svelte:head>
 <Layout>
   <h1 class="header">Experience</h1>
-  <!-- <p class="main-p">
-    {$store.experience1}
-    <br />
-    <br />
-    {$store.experience2}
-    <br />
-    <br />
-    {$store.experience3}
-    <br />
-    <br />
-    {$store.experience4}
-  </p> -->
   <div class="main-p">
   <Experience />
 </div>

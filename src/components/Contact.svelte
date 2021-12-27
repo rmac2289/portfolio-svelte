@@ -78,20 +78,10 @@
           rel="noopener noreferrer"><i class="fab fa-linkedin-in" /></a
         >
         <a
-          href="https://ross-scott-macdonald.medium.com/"
-          target="_blank"
-          rel="noopener noreferrer"><i class="fab fa-medium-m" /></a
-        >
-        <a
           href="https://github.com/rmac2289"
           target="_blank"
           rel="noopener noreferrer"><i class="fab fa-github" />
         </a>
-        <a
-          href="https://stackoverflow.com/users/12433240/ross?tab=profile"
-          target="_blank"
-          rel="noopener noreferrer"><i class="fab fa-stack-overflow" /></a
-        >
       </div>
       <button on:click|preventDefault={handleSubmit}>send</button>
     </form>
@@ -170,7 +160,7 @@
     transition: 0.5s all linear;
   }
   .icons {
-    min-width: 120px;
+    width: 60px;
     grid-row: 5;
     display: flex;
     justify-content: space-between;

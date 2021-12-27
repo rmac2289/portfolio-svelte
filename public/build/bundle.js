@@ -2355,7 +2355,7 @@ var app = (function () {
     			t2 = space();
     			div0 = element("div");
     			h2 = element("h2");
-    			t3 = text("Full Stack Developer");
+    			t3 = text("Full Stack Engineer");
     			this.h();
     		},
     		l: function claim(nodes) {
@@ -2372,7 +2372,7 @@ var app = (function () {
     			var div0_nodes = children(div0);
     			h2 = claim_element(div0_nodes, "H2", { class: true });
     			var h2_nodes = children(h2);
-    			t3 = claim_text(h2_nodes, "Full Stack Developer");
+    			t3 = claim_text(h2_nodes, "Full Stack Engineer");
     			h2_nodes.forEach(detach_dev);
     			div0_nodes.forEach(detach_dev);
     			div1_nodes.forEach(detach_dev);
@@ -2950,7 +2950,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (30:2) {#if y > 50 || window.innerWidth > 1500}
+    // (18:2) {#if y > 50 || window.innerWidth > 1500}
     function create_if_block$1(ctx) {
     	let h10;
     	let t0;
@@ -3036,13 +3036,13 @@ var app = (function () {
     		},
     		h: function hydrate() {
     			attr_dev(h10, "class", "header svelte-10vcal7");
-    			add_location(h10, file$5, 30, 4, 643);
+    			add_location(h10, file$5, 18, 4, 440);
     			attr_dev(div0, "class", "tech-grid svelte-10vcal7");
-    			add_location(div0, file$5, 31, 4, 712);
+    			add_location(div0, file$5, 19, 4, 509);
     			attr_dev(h11, "class", "header svelte-10vcal7");
-    			add_location(h11, file$5, 45, 4, 1228);
+    			add_location(h11, file$5, 33, 4, 1025);
     			attr_dev(div1, "class", "tech-grid svelte-10vcal7");
-    			add_location(div1, file$5, 49, 4, 1312);
+    			add_location(div1, file$5, 37, 4, 1109);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h10, anchor);
@@ -3160,14 +3160,14 @@ var app = (function () {
     		block,
     		id: create_if_block$1.name,
     		type: "if",
-    		source: "(30:2) {#if y > 50 || window.innerWidth > 1500}",
+    		source: "(18:2) {#if y > 50 || window.innerWidth > 1500}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (37:10) {:else}
+    // (25:10) {:else}
     function create_else_block_1(ctx) {
     	let img;
     	let img_src_value;
@@ -3186,7 +3186,7 @@ var app = (function () {
     			if (img.src !== (img_src_value = /*tech*/ ctx[7].src)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", img_alt_value = /*tech*/ ctx[7].name);
     			attr_dev(img, "height", "30");
-    			add_location(img, file$5, 37, 12, 1030);
+    			add_location(img, file$5, 25, 12, 827);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -3209,14 +3209,14 @@ var app = (function () {
     		block,
     		id: create_else_block_1.name,
     		type: "else",
-    		source: "(37:10) {:else}",
+    		source: "(25:10) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (35:10) {#if tech.class}
+    // (23:10) {#if tech.class}
     function create_if_block_2(ctx) {
     	let i;
     	let i_class_value;
@@ -3234,7 +3234,7 @@ var app = (function () {
     		h: function hydrate() {
     			attr_dev(i, "class", i_class_value = "" + (null_to_empty(/*tech*/ ctx[7].class) + " svelte-10vcal7"));
     			set_style(i, "color", /*tech*/ ctx[7].color);
-    			add_location(i, file$5, 35, 12, 948);
+    			add_location(i, file$5, 23, 12, 745);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -3257,14 +3257,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(35:10) {#if tech.class}",
+    		source: "(23:10) {#if tech.class}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (33:6) {#each $store.tech as tech}
+    // (21:6) {#each $store.tech as tech}
     function create_each_block_1(ctx) {
     	let a;
     	let t0;
@@ -3313,9 +3313,9 @@ var app = (function () {
     		},
     		h: function hydrate() {
     			attr_dev(p, "id", "name");
-    			add_location(p, file$5, 40, 12, 1138);
+    			add_location(p, file$5, 28, 12, 935);
     			attr_dev(div, "class", "name svelte-10vcal7");
-    			add_location(div, file$5, 39, 10, 1107);
+    			add_location(div, file$5, 27, 10, 904);
     			attr_dev(a, "href", a_href_value = /*tech*/ ctx[7].href);
 
     			attr_dev(a, "class", a_class_value = "" + (null_to_empty(/*$darkmode*/ ctx[2]
@@ -3323,7 +3323,7 @@ var app = (function () {
     			: "icon-box") + " svelte-10vcal7"));
 
     			attr_dev(a, "target", "_blank");
-    			add_location(a, file$5, 33, 8, 814);
+    			add_location(a, file$5, 21, 8, 611);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -3369,14 +3369,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(33:6) {#each $store.tech as tech}",
+    		source: "(21:6) {#each $store.tech as tech}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (55:10) {:else}
+    // (43:10) {:else}
     function create_else_block(ctx) {
     	let img;
     	let img_src_value;
@@ -3395,7 +3395,7 @@ var app = (function () {
     			if (img.src !== (img_src_value = /*learning*/ ctx[4].src)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", img_alt_value = /*learning*/ ctx[4].name);
     			attr_dev(img, "height", "30");
-    			add_location(img, file$5, 55, 12, 1620);
+    			add_location(img, file$5, 43, 12, 1417);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -3418,14 +3418,14 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(55:10) {:else}",
+    		source: "(43:10) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (53:10) {#if learning.class}
+    // (41:10) {#if learning.class}
     function create_if_block_1(ctx) {
     	let i;
     	let i_class_value;
@@ -3443,7 +3443,7 @@ var app = (function () {
     		h: function hydrate() {
     			attr_dev(i, "class", i_class_value = "" + (null_to_empty(/*learning*/ ctx[4].class) + " svelte-10vcal7"));
     			set_style(i, "color", /*learning*/ ctx[4].color);
-    			add_location(i, file$5, 53, 12, 1529);
+    			add_location(i, file$5, 41, 12, 1326);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -3466,14 +3466,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(53:10) {#if learning.class}",
+    		source: "(41:10) {#if learning.class}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (51:6) {#each $store.learning as learning}
+    // (39:6) {#each $store.learning as learning}
     function create_each_block$1(ctx) {
     	let div1;
     	let t0;
@@ -3521,15 +3521,15 @@ var app = (function () {
     		},
     		h: function hydrate() {
     			attr_dev(p, "id", "name");
-    			add_location(p, file$5, 58, 12, 1736);
+    			add_location(p, file$5, 46, 12, 1533);
     			attr_dev(div0, "class", "name svelte-10vcal7");
-    			add_location(div0, file$5, 57, 10, 1705);
+    			add_location(div0, file$5, 45, 10, 1502);
 
     			attr_dev(div1, "class", div1_class_value = "" + (null_to_empty(/*$darkmode*/ ctx[2]
     			? "icon-box icon-box-dark"
     			: "icon-box") + " svelte-10vcal7"));
 
-    			add_location(div1, file$5, 51, 8, 1422);
+    			add_location(div1, file$5, 39, 8, 1219);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -3571,7 +3571,7 @@ var app = (function () {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(51:6) {#each $store.learning as learning}",
+    		source: "(39:6) {#each $store.learning as learning}",
     		ctx
     	});
 
@@ -3622,7 +3622,7 @@ var app = (function () {
     			attr_dev(h1, "class", "header svelte-10vcal7");
     			add_location(h1, file$5, 13, 2, 311);
     			attr_dev(div, "class", "main-p svelte-10vcal7");
-    			add_location(div, file$5, 26, 2, 551);
+    			add_location(div, file$5, 14, 2, 348);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h1, anchor);
@@ -4262,15 +4262,9 @@ var app = (function () {
     	let a1;
     	let i1;
     	let t12;
-    	let a2;
-    	let i2;
-    	let t13;
-    	let a3;
-    	let i3;
-    	let t14;
     	let button;
-    	let t15;
-    	let t16;
+    	let t13;
+    	let t14;
     	let toast;
     	let current;
     	let mounted;
@@ -4306,15 +4300,9 @@ var app = (function () {
     			a1 = element("a");
     			i1 = element("i");
     			t12 = space();
-    			a2 = element("a");
-    			i2 = element("i");
-    			t13 = space();
-    			a3 = element("a");
-    			i3 = element("i");
-    			t14 = space();
     			button = element("button");
-    			t15 = text("send");
-    			t16 = space();
+    			t13 = text("send");
+    			t14 = space();
     			create_component(toast.$$.fragment);
     			this.h();
     		},
@@ -4384,88 +4372,64 @@ var app = (function () {
     			i1 = claim_element(a1_nodes, "I", { class: true });
     			children(i1).forEach(detach_dev);
     			a1_nodes.forEach(detach_dev);
-    			t12 = claim_space(div0_nodes);
-    			a2 = claim_element(div0_nodes, "A", { href: true, target: true, rel: true });
-    			var a2_nodes = children(a2);
-    			i2 = claim_element(a2_nodes, "I", { class: true });
-    			children(i2).forEach(detach_dev);
-    			a2_nodes.forEach(detach_dev);
-    			t13 = claim_space(div0_nodes);
-    			a3 = claim_element(div0_nodes, "A", { href: true, target: true, rel: true });
-    			var a3_nodes = children(a3);
-    			i3 = claim_element(a3_nodes, "I", { class: true });
-    			children(i3).forEach(detach_dev);
-    			a3_nodes.forEach(detach_dev);
     			div0_nodes.forEach(detach_dev);
-    			t14 = claim_space(form_nodes);
+    			t12 = claim_space(form_nodes);
     			button = claim_element(form_nodes, "BUTTON", { class: true });
     			var button_nodes = children(button);
-    			t15 = claim_text(button_nodes, "send");
+    			t13 = claim_text(button_nodes, "send");
     			button_nodes.forEach(detach_dev);
     			form_nodes.forEach(detach_dev);
-    			t16 = claim_space(div1_nodes);
+    			t14 = claim_space(div1_nodes);
     			claim_component(toast.$$.fragment, div1_nodes);
     			div1_nodes.forEach(detach_dev);
     			this.h();
     		},
     		h: function hydrate() {
-    			attr_dev(h1, "class", "header svelte-wyzh46");
+    			attr_dev(h1, "class", "header svelte-1y0hhbu");
     			add_location(h1, file$7, 58, 2, 1425);
     			attr_dev(label0, "for", "email");
-    			attr_dev(label0, "class", "svelte-wyzh46");
+    			attr_dev(label0, "class", "svelte-1y0hhbu");
     			add_location(label0, file$7, 62, 6, 1504);
     			attr_dev(input0, "type", "email");
     			attr_dev(input0, "id", "email");
     			input0.required = input0_required_value = true;
-    			attr_dev(input0, "class", "svelte-wyzh46");
+    			attr_dev(input0, "class", "svelte-1y0hhbu");
     			add_location(input0, file$7, 63, 6, 1543);
     			attr_dev(label1, "for", "name");
-    			attr_dev(label1, "class", "svelte-wyzh46");
+    			attr_dev(label1, "class", "svelte-1y0hhbu");
     			add_location(label1, file$7, 64, 6, 1618);
     			attr_dev(input1, "type", "text");
     			attr_dev(input1, "id", "name");
     			input1.required = input1_required_value = true;
-    			attr_dev(input1, "class", "svelte-wyzh46");
+    			attr_dev(input1, "class", "svelte-1y0hhbu");
     			add_location(input1, file$7, 65, 6, 1655);
     			attr_dev(label2, "for", "message");
-    			attr_dev(label2, "class", "svelte-wyzh46");
+    			attr_dev(label2, "class", "svelte-1y0hhbu");
     			add_location(label2, file$7, 66, 6, 1727);
     			attr_dev(textarea, "type", "textarea");
     			attr_dev(textarea, "id", "message");
     			textarea.required = textarea_required_value = true;
-    			attr_dev(textarea, "class", "svelte-wyzh46");
+    			attr_dev(textarea, "class", "svelte-1y0hhbu");
     			add_location(textarea, file$7, 67, 6, 1770);
-    			attr_dev(i0, "class", "fab fa-linkedin-in svelte-wyzh46");
+    			attr_dev(i0, "class", "fab fa-linkedin-in svelte-1y0hhbu");
     			add_location(i0, file$7, 77, 36, 2044);
     			attr_dev(a0, "href", "https://www.linkedin.com/in/rsmacdonald/");
     			attr_dev(a0, "target", "_blank");
     			attr_dev(a0, "rel", "noopener noreferrer");
     			add_location(a0, file$7, 74, 8, 1921);
-    			attr_dev(i1, "class", "fab fa-medium-m svelte-wyzh46");
-    			add_location(i1, file$7, 82, 36, 2221);
-    			attr_dev(a1, "href", "https://ross-scott-macdonald.medium.com/");
+    			attr_dev(i1, "class", "fab fa-github svelte-1y0hhbu");
+    			add_location(i1, file$7, 82, 36, 2208);
+    			attr_dev(a1, "href", "https://github.com/rmac2289");
     			attr_dev(a1, "target", "_blank");
     			attr_dev(a1, "rel", "noopener noreferrer");
     			add_location(a1, file$7, 79, 8, 2098);
-    			attr_dev(i2, "class", "fab fa-github svelte-wyzh46");
-    			add_location(i2, file$7, 87, 36, 2382);
-    			attr_dev(a2, "href", "https://github.com/rmac2289");
-    			attr_dev(a2, "target", "_blank");
-    			attr_dev(a2, "rel", "noopener noreferrer");
-    			add_location(a2, file$7, 84, 8, 2272);
-    			attr_dev(i3, "class", "fab fa-stack-overflow svelte-wyzh46");
-    			add_location(i3, file$7, 92, 36, 2571);
-    			attr_dev(a3, "href", "https://stackoverflow.com/users/12433240/ross?tab=profile");
-    			attr_dev(a3, "target", "_blank");
-    			attr_dev(a3, "rel", "noopener noreferrer");
-    			add_location(a3, file$7, 89, 8, 2431);
-    			attr_dev(div0, "class", "icons svelte-wyzh46");
+    			attr_dev(div0, "class", "icons svelte-1y0hhbu");
     			add_location(div0, file$7, 73, 6, 1893);
-    			attr_dev(button, "class", "svelte-wyzh46");
-    			add_location(button, file$7, 95, 6, 2639);
-    			attr_dev(form, "class", "svelte-wyzh46");
+    			attr_dev(button, "class", "svelte-1y0hhbu");
+    			add_location(button, file$7, 85, 6, 2268);
+    			attr_dev(form, "class", "svelte-1y0hhbu");
     			add_location(form, file$7, 61, 4, 1491);
-    			attr_dev(div1, "class", "content svelte-wyzh46");
+    			attr_dev(div1, "class", "content svelte-1y0hhbu");
     			add_location(div1, file$7, 60, 2, 1465);
     		},
     		m: function mount(target, anchor) {
@@ -4498,16 +4462,10 @@ var app = (function () {
     			append_dev(div0, t11);
     			append_dev(div0, a1);
     			append_dev(a1, i1);
-    			append_dev(div0, t12);
-    			append_dev(div0, a2);
-    			append_dev(a2, i2);
-    			append_dev(div0, t13);
-    			append_dev(div0, a3);
-    			append_dev(a3, i3);
-    			append_dev(form, t14);
+    			append_dev(form, t12);
     			append_dev(form, button);
-    			append_dev(button, t15);
-    			append_dev(div1, t16);
+    			append_dev(button, t13);
+    			append_dev(div1, t14);
     			mount_component(toast, div1, null);
     			current = true;
 

@@ -66,7 +66,7 @@
         <h1 class="corner-name">Ross MacDonald</h1>
         <hr />
         <div class="sub-header">
-            <h2 class="corner-sub">Full Stack Developer</h2>
+            <h2 class="corner-sub">Full Stack Engineer</h2>
         </div>
     </div>
 {/if}
