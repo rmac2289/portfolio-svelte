@@ -495,7 +495,7 @@ export const store = readable({
     },
     images: [{ src: "images/portfoliohome.png" }],
   },
-  experience1: `I currently work as a Jr. Software Development Engineer in Test at Axos Bank in
+  experience1: `I currently work as a Software Development Engineer in Test at Axos Bank in
   San Diego, working mainly on test automation and testing metrics. During my first few months
   at the bank I established myself as a leader within the testing team. I took the initiative to 
   expand on our automation framework, Testim.io, by building out a Node.js/Express API that fed
