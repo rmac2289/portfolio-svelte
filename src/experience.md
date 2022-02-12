@@ -1,4 +1,4 @@
-I currently work as a Jr. Software Development Engineer in Test at Axos Bank in
+I currently work as a Software Development Engineer in Test at Axos Bank in
 San Diego, working mainly on test automation and testing metrics. During my first few months at the bank I established myself as a leader within the testing team. I took the initiative to expand on our automation framework, Testim.io, by building out a Node.js/Express API that fed our testing data into an Elasticsearch cluster. Within Elasticsearch I then visualized the data using Kibana, so internal teams could see how their applications were performaing in both production and test environments. In addition to gathering data on applications, I also created a pipeline to ingest metadata from the testing framework itself, allowing the team to see how efficiently we were
 using it.
 
